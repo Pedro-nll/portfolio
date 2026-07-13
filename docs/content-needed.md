@@ -14,7 +14,7 @@ Replace placeholders only with content supplied or explicitly approved by Pedro.
 - [x] Public contact email: `pedronll@outlook.com`.
 - [x] Real Portuguese résumé PDF at `public/resume/resume-pt.pdf`.
 - [x] Real English résumé PDF at `public/resume/resume-en.pdf`.
-- [ ] Final review of experience selection: currently includes Infoblox, dti digital, and Agencia Experimental de Software / Grade Inteligente. Confirm whether to add or exclude research and teaching assistant entries.
-- [ ] Real project details beyond Grade Inteligente. Two concept project cards still remain.
+- [x] Final review of experience selection: keep Infoblox, dti digital, and Agencia Experimental de Software / Grade Inteligente; exclude research and teaching assistant entries.
+- [ ] Real project details beyond Grade Inteligente. Two concept project cards intentionally remain for now.
 - [x] GitHub username/profile handle: `Pedro-nll`.
 - [ ] Final canonical production URL after GitHub Pages is configured.

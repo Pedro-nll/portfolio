@@ -58,6 +58,8 @@ Pedro supplied résumé PDFs, a profile image, email, LinkedIn URLs, and specifi
 
 Experience currently focuses on Infoblox, dti digital, and Agencia Experimental de Software / Grade Inteligente because Pedro explicitly called out DTI and Infoblox and supplied Grade Inteligente context. Research and teaching assistant entries remain excluded until Pedro confirms whether they fit the portfolio positioning.
 
+Pedro later confirmed that research and teaching assistant entries should stay excluded. Grade Inteligente uses `https://icei.pucminas.br/gradeinteligente/` as the project link, while the two other concept cards remain.
+
 The source files Pedro placed in `docs/` are ignored by git after being copied into `public/`; this avoids duplicating source assets in the public repository while keeping the served files in the app.
 
 ## Phase 0 scaffold details

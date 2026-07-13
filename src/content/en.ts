@@ -60,7 +60,9 @@ export const enContent: PortfolioContent = {
             'Curriculum matrix management system for PUC Minas ICEI units, with about 5,000 accesses at the university.',
           technologies: ['Spring Framework', 'Full-stack development', 'Java'],
           previewLabel: 'Conceptual preview of the Grade Inteligente project',
-          links: {},
+          links: {
+            demo: 'https://icei.pucminas.br/gradeinteligente/',
+          },
         },
         {
           id: 'automation-hub',

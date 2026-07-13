@@ -60,7 +60,9 @@ export const ptContent: PortfolioContent = {
             'Sistema de gestao de matriz curricular para o Instituto de Ciencias Exatas e Informatica da PUC Minas, com cerca de 5 mil acessos na faculdade.',
           technologies: ['Spring Framework', 'Desenvolvimento full-stack', 'Java'],
           previewLabel: 'Previa conceitual do projeto Grade Inteligente',
-          links: {},
+          links: {
+            demo: 'https://icei.pucminas.br/gradeinteligente/',
+          },
         },
         {
           id: 'automation-hub',
