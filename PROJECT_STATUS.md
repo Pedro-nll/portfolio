@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Phase 5 in progress - Content review adjustments.
+Phase 6 in progress - GitHub Pages deployment.
 
 ## Last completed work
 
@@ -38,6 +38,9 @@ Phase 5 in progress - Content review adjustments.
 - Updated metadata description to remove placeholder wording.
 - Added the Grade Inteligente project link: `https://icei.pucminas.br/gradeinteligente/`.
 - Confirmed research and teaching assistant entries should remain excluded.
+- Added `.github/workflows/deploy.yml` for GitHub Pages deployment through GitHub Actions.
+- Enabled GitHub Pages with `build_type=workflow`.
+- GitHub Pages reports the production URL as `https://pedro-nll.github.io/portfolio/`.
 
 ## In progress
 
@@ -45,10 +48,11 @@ Phase 5 in progress - Content review adjustments.
 
 ## Next recommended action
 
-Continue with any additional real project details Pedro supplies, or proceed toward deployment preparation when Pedro approves the current content mix.
+Push the deployment workflow, wait for the Pages workflow to complete, and verify `https://pedro-nll.github.io/portfolio/`.
 
 ## Blockers and questions for Pedro
 
+- No current deployment blockers.
 - Two concept project cards intentionally remain until Pedro supplies additional real project details.
 
 ## Validation performed
@@ -81,6 +85,10 @@ Continue with any additional real project details Pedro supplies, or proceed tow
 - `npm run lint` passed after adding the Grade Inteligente link.
 - `npm run type-check` passed after adding the Grade Inteligente link.
 - `npm run build` passed after adding the Grade Inteligente link.
+- `npm run lint` passed before adding the deployment workflow.
+- `npm run type-check` passed before adding the deployment workflow.
+- `npm run build` passed before adding the deployment workflow.
+- `gh api --method POST repos/Pedro-nll/portfolio/pages -f build_type=workflow` succeeded and returned `https://pedro-nll.github.io/portfolio/`.
 - `npm run dev -- --host 127.0.0.1` started successfully at `http://127.0.0.1:5173/` after local port binding was approved.
 - `gh repo create portfolio --public --source=. --remote=origin --push` succeeded.
 - `git status --short --branch` shows `main...origin/main`.
@@ -94,7 +102,5 @@ Continue with any additional real project details Pedro supplies, or proceed tow
 ## Files changed in the latest session
 
 - `PROJECT_STATUS.md`
+- `.github/workflows/deploy.yml`
 - `docs/decisions.md`
-- `docs/content-needed.md`
-- `src/content/en.ts`
-- `src/content/pt.ts`

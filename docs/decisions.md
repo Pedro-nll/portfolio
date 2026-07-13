@@ -62,6 +62,12 @@ Pedro later confirmed that research and teaching assistant entries should stay e
 
 The source files Pedro placed in `docs/` are ignored by git after being copied into `public/`; this avoids duplicating source assets in the public repository while keeping the served files in the app.
 
+## Phase 6 GitHub Pages deployment
+
+Deployment uses GitHub Pages with GitHub Actions, matching the current Vite static deployment guide and GitHub Pages custom workflow requirements. The workflow builds with `npm ci`, `npm run lint`, and `npm run build`, uploads `dist`, and deploys it through GitHub Pages.
+
+The repository remains a project Pages site at `/portfolio/`; `vite.config.ts` keeps production builds on `base: '/portfolio/'` while local development stays at `/`.
+
 ## Phase 0 scaffold details
 
 The Vite template resolved to React 19, TypeScript 6, Vite 8, and `oxlint`. These are accepted as scaffold defaults for Phase 0. Any future dependency additions require an explicit reason and should be recorded here or in `PROJECT_STATUS.md`.
