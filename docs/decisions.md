@@ -24,6 +24,10 @@ Technology tags belong on project cards where they provide context. A separate s
 
 Desktop will use a left profile panel and right content column. Mobile will use one natural document scroll with compact intro and sticky navigation, avoiding nested scroll containers.
 
+## Phase 1 structural prototype
+
+Phase 1 renders Portuguese content as the temporary fallback while keeping English content typed in a separate file for later preference handling. The language and theme controls are visible but disabled until their persistence behavior is implemented in Phase 3. Project previews are CSS placeholders rather than sourced images so no unapproved assets or claims are introduced.
+
 ## Phase 0 scaffold details
 
 The Vite template resolved to React 19, TypeScript 6, Vite 8, and `oxlint`. These are accepted as scaffold defaults for Phase 0. Any future dependency additions require an explicit reason and should be recorded here or in `PROJECT_STATUS.md`.

@@ -2,17 +2,16 @@
 
 ## Current phase
 
-Phase 0 complete - Discovery and repository bootstrap.
+Phase 1 complete - Structural prototype.
 
 ## Last completed work
 
-- Created the Vite React TypeScript project at `/home/pedro/Desktop/Projetos/portfolio`.
-- Installed baseline npm dependencies.
-- Configured Vite production builds for the `/portfolio/` GitHub Pages base path while keeping local dev at `/`.
-- Added a separate `npm run type-check` validation command.
-- Replaced the generated demo screen with a neutral Phase 0 placeholder using supplied name and GitHub profile.
-- Added required continuity files.
-- Initialized a local git repository and renamed the branch to `main`.
+- Committed Phase 0 baseline locally as `e1a1bfa chore: initialize portfolio`.
+- Built the Phase 1 semantic single-page structure with profile panel, anchor navigation, projects, experience, contact, and footer.
+- Added typed Portuguese and English content files while rendering Portuguese as the temporary fallback.
+- Added three clearly labeled concept project cards.
+- Added placeholder experience and pending contact fields without inventing unverified claims or links.
+- Added responsive structural CSS for desktop two-column layout and mobile natural scroll with sticky navigation.
 
 ## In progress
 
@@ -20,7 +19,7 @@ Phase 0 complete - Discovery and repository bootstrap.
 
 ## Next recommended action
 
-Proceed with Phase 1 structural prototype.
+Proceed with Phase 2 design system and restrained workspace vignette after resolving the remote push decision.
 
 ## Blockers and questions for Pedro
 
@@ -32,12 +31,13 @@ Proceed with Phase 1 structural prototype.
 
 - `npm run lint` passed.
 - `npm run type-check` passed.
-- `npm run build` passed. Production output was generated in `dist/` with Vite base path `/portfolio/`.
+- `npm run build` passed after Phase 1. Production output was generated in `dist/` with Vite base path `/portfolio/`.
 - `npm run dev -- --host 127.0.0.1` started successfully at `http://127.0.0.1:5173/` after local port binding was approved.
 
 ## Known issues
 
-- The portfolio UI is not implemented yet; only a Phase 0 placeholder exists.
+- Theme toggle, language toggle, active navigation state, résumé locale switching, and the decorative workspace vignette are not implemented yet.
+- The résumé link points to the planned base-path-safe placeholder path, but the PDF files are not present yet.
 - Real résumé PDFs, profile photo, experience entries, contact email, LinkedIn URL, and project details are not supplied yet.
 - The Vite scaffold still includes unused starter assets under `src/assets/` and `public/icons.svg`; they are not referenced by the app.
 
@@ -57,6 +57,16 @@ Proceed with Phase 1 structural prototype.
 - `src/`
 - `src/App.css`
 - `src/App.tsx`
+- `src/components/AppShell.tsx`
+- `src/components/ContactLinks.tsx`
+- `src/components/ExperienceTimeline.tsx`
+- `src/components/Navigation.tsx`
+- `src/components/ProfilePanel.tsx`
+- `src/components/ProjectCard.tsx`
+- `src/components/ProjectsSection.tsx`
+- `src/content/en.ts`
+- `src/content/pt.ts`
+- `src/content/types.ts`
 - `src/index.css`
 - `tsconfig.app.json`
 - `tsconfig.json`
