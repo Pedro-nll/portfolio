@@ -48,8 +48,14 @@ export type PortfolioContent = {
   }>
   actions: {
     resume: string
+    resumePending: string
     language: string
-    theme: string
+    languageLabel: string
+    theme: {
+      label: string
+      light: string
+      dark: string
+    }
   }
   sections: {
     projects: {

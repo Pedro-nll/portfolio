@@ -1,4 +1,5 @@
 import type { PortfolioContent } from '../content/types'
+import type { ThemePreference } from '../hooks/useTheme'
 import { ContactLinks } from './ContactLinks'
 import { ExperienceTimeline } from './ExperienceTimeline'
 import { Navigation } from './Navigation'
@@ -7,9 +8,19 @@ import { ProjectsSection } from './ProjectsSection'
 
 type AppShellProps = {
   content: PortfolioContent
+  activeSection: PortfolioContent['nav'][number]['id']
+  theme: ThemePreference
+  onLanguageToggle: () => void
+  onThemeToggle: () => void
 }
 
-export function AppShell({ content }: AppShellProps) {
+export function AppShell({
+  content,
+  activeSection,
+  theme,
+  onLanguageToggle,
+  onThemeToggle,
+}: AppShellProps) {
   const year = new Date().getFullYear()
 
   return (
@@ -19,10 +30,16 @@ export function AppShell({ content }: AppShellProps) {
       </a>
 
       <div className="app-shell">
-        <ProfilePanel content={content} />
+        <ProfilePanel
+          content={content}
+          activeSection={activeSection}
+          theme={theme}
+          onLanguageToggle={onLanguageToggle}
+          onThemeToggle={onThemeToggle}
+        />
 
         <div className="mobile-nav">
-          <Navigation items={content.nav} />
+          <Navigation items={content.nav} activeSection={activeSection} />
         </div>
 
         <main className="content-column" id="main-content">

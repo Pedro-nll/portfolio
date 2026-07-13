@@ -36,6 +36,16 @@ The workspace vignette is an inline decorative SVG component using simple shelve
 
 No dependencies were added for Phase 2. Motion remains limited to short focus, hover, and skip-link transitions, with reduced-motion support disabling nonessential transition duration.
 
+## Phase 3 preferences and localization
+
+Phase 3 implements language and theme preferences with small React hooks and `localStorage`; no dependency was added. Portuguese remains the fallback unless the browser language clearly starts with English or the user has stored an explicit choice. The selected language updates the document `lang` attribute.
+
+Theme preference is stored explicitly as `light` or `dark` and applied through `document.documentElement.dataset.theme`. The first load still respects the operating-system preference before an explicit choice exists.
+
+The résumé control now builds a base-path-safe URL for `resume-pt.pdf` or `resume-en.pdf` according to the active language. The PDF files remain placeholders to be supplied later.
+
+Active section state uses `IntersectionObserver` and `aria-current` on anchor links. The active state is shown with weight and an inset marker, not color alone.
+
 ## Phase 0 scaffold details
 
 The Vite template resolved to React 19, TypeScript 6, Vite 8, and `oxlint`. These are accepted as scaffold defaults for Phase 0. Any future dependency additions require an explicit reason and should be recorded here or in `PROJECT_STATUS.md`.

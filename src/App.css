@@ -127,9 +127,16 @@
 }
 
 .site-nav a:hover,
+.site-nav a[aria-current='true'],
 .button:hover {
   background: var(--color-accent-soft);
   border-color: var(--color-accent);
+}
+
+.site-nav a[aria-current='true'] {
+  box-shadow: inset 0 -3px 0 var(--color-accent);
+  color: var(--color-accent-strong);
+  font-weight: 800;
 }
 
 .button {
@@ -146,9 +153,17 @@
   background: var(--color-accent-strong);
 }
 
-.button:disabled {
-  cursor: not-allowed;
-  opacity: 0.62;
+.resume-button {
+  align-items: flex-start;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.resume-button small {
+  font-size: 0.72rem;
+  font-weight: 700;
+  opacity: 0.82;
 }
 
 .profile-actions {

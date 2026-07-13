@@ -1,14 +1,27 @@
 import type { PortfolioContent } from '../content/types'
+import type { ThemePreference } from '../hooks/useTheme'
 import { Navigation } from './Navigation'
 import { WorkspaceVignette } from './WorkspaceVignette'
 
 type ProfilePanelProps = {
   content: PortfolioContent
+  activeSection: PortfolioContent['nav'][number]['id']
+  theme: ThemePreference
+  onLanguageToggle: () => void
+  onThemeToggle: () => void
 }
 
-export function ProfilePanel({ content }: ProfilePanelProps) {
+export function ProfilePanel({
+  content,
+  activeSection,
+  theme,
+  onLanguageToggle,
+  onThemeToggle,
+}: ProfilePanelProps) {
   const { profile, actions, nav } = content
-  const resumeHref = `${import.meta.env.BASE_URL}resume/resume-pt.pdf`
+  const resumeFile = content.language === 'en' ? 'resume-en.pdf' : 'resume-pt.pdf'
+  const resumeHref = `${import.meta.env.BASE_URL}resume/${resumeFile}`
+  const nextThemeLabel = theme === 'dark' ? actions.theme.light : actions.theme.dark
 
   return (
     <aside className="profile-panel" aria-label="Profile summary">
@@ -32,17 +45,28 @@ export function ProfilePanel({ content }: ProfilePanelProps) {
         ))}
       </dl>
 
-      <Navigation items={nav} />
+      <Navigation items={nav} activeSection={activeSection} />
 
       <div className="profile-actions" aria-label="Portfolio controls">
-        <a className="button primary" href={resumeHref}>
-          {actions.resume}
+        <a className="button primary resume-button" href={resumeHref}>
+          <span>{actions.resume}</span>
+          <small>{actions.resumePending}</small>
         </a>
-        <button className="button" type="button" disabled>
+        <button
+          className="button"
+          type="button"
+          aria-label={actions.languageLabel}
+          onClick={onLanguageToggle}
+        >
           {actions.language}
         </button>
-        <button className="button" type="button" disabled>
-          {actions.theme}
+        <button
+          className="button"
+          type="button"
+          aria-label={`${actions.theme.label}: ${nextThemeLabel}`}
+          onClick={onThemeToggle}
+        >
+          {nextThemeLabel}
         </button>
       </div>
 

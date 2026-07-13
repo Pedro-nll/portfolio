@@ -22,8 +22,14 @@ export const enContent: PortfolioContent = {
   ],
   actions: {
     resume: 'Resume',
+    resumePending: 'PDF pending',
     language: 'Portugues',
-    theme: 'Theme',
+    languageLabel: 'Switch language to Portuguese',
+    theme: {
+      label: 'Toggle theme',
+      light: 'Light',
+      dark: 'Dark',
+    },
   },
   sections: {
     projects: {

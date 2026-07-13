@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Phase 2 complete - Design system and restrained workspace vignette.
+Phase 3 complete - Localization and preferences.
 
 ## Last completed work
 
@@ -18,6 +18,11 @@ Phase 2 complete - Design system and restrained workspace vignette.
 - Added semantic CSS tokens in `src/styles/tokens.css` for light/dark palette, surfaces, borders, focus, shadows, and illustration colors.
 - Polished typography, spacing, project card hierarchy, focus states, responsive surfaces, and reduced-motion behavior.
 - Added a restrained decorative workspace SVG vignette in the profile panel.
+- Implemented language preference with Portuguese fallback, English browser detection, localStorage persistence, and document `lang` updates.
+- Implemented explicit light/dark theme preference with localStorage persistence while preserving OS preference on first load.
+- Wired language and theme controls in the profile panel.
+- Added locale-aware, base-path-safe résumé links for `resume-pt.pdf` and `resume-en.pdf`.
+- Added active section tracking with `IntersectionObserver` and `aria-current` navigation state.
 
 ## In progress
 
@@ -25,11 +30,11 @@ Phase 2 complete - Design system and restrained workspace vignette.
 
 ## Next recommended action
 
-Proceed with Phase 3 localization and preferences: language switching, theme switching, active navigation state, document `lang`, and locale-aware résumé behavior.
+Proceed with Phase 4 quality pass: keyboard navigation, reduced motion, zoom/narrow widths, broken links, missing assets, content-claim review, and responsive checks.
 
 ## Blockers and questions for Pedro
 
-- No current blockers for Phase 3 implementation.
+- No current blockers for Phase 4 implementation.
 - Later content still needed before replacing placeholders; see `docs/content-needed.md`.
 
 ## Validation performed
@@ -41,13 +46,16 @@ Proceed with Phase 3 localization and preferences: language switching, theme swi
 - `npm run type-check` passed after Phase 2.
 - `npm run build` passed after Phase 2. Production output was generated in `dist/` with Vite base path `/portfolio/`.
 - `npm run dev -- --host 127.0.0.1` started successfully at `http://127.0.0.1:5173/` after Phase 2.
+- `npm run lint` passed after Phase 3.
+- `npm run type-check` passed after Phase 3.
+- `npm run build` passed after Phase 3. Production output was generated in `dist/` with Vite base path `/portfolio/`.
+- `npm run dev -- --host 127.0.0.1` started successfully at `http://127.0.0.1:5173/` after Phase 3.
 - `npm run dev -- --host 127.0.0.1` started successfully at `http://127.0.0.1:5173/` after local port binding was approved.
 - `gh repo create portfolio --public --source=. --remote=origin --push` succeeded.
 - `git status --short --branch` shows `main...origin/main`.
 
 ## Known issues
 
-- Theme toggle, language toggle, active navigation state, résumé locale switching, and document language updates are not implemented yet.
 - The résumé link points to the planned base-path-safe placeholder path, but the PDF files are not present yet.
 - Real résumé PDFs, profile photo, experience entries, contact email, LinkedIn URL, and project details are not supplied yet.
 - The Vite scaffold still includes unused starter assets under `src/assets/` and `public/icons.svg`; they are not referenced by the app.
@@ -79,6 +87,9 @@ Proceed with Phase 3 localization and preferences: language switching, theme swi
 - `src/content/en.ts`
 - `src/content/pt.ts`
 - `src/content/types.ts`
+- `src/hooks/useActiveSection.ts`
+- `src/hooks/useLanguage.ts`
+- `src/hooks/useTheme.ts`
 - `src/index.css`
 - `src/styles/tokens.css`
 - `tsconfig.app.json`

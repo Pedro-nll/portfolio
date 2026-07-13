@@ -22,8 +22,14 @@ export const ptContent: PortfolioContent = {
   ],
   actions: {
     resume: 'Curriculo',
+    resumePending: 'PDF pendente',
     language: 'English',
-    theme: 'Tema',
+    languageLabel: 'Alternar idioma para ingles',
+    theme: {
+      label: 'Alternar tema',
+      light: 'Claro',
+      dark: 'Escuro',
+    },
   },
   sections: {
     projects: {
