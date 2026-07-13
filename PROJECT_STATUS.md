@@ -7,6 +7,7 @@ Phase 1 complete - Structural prototype.
 ## Last completed work
 
 - Committed Phase 0 baseline locally as `e1a1bfa chore: initialize portfolio`.
+- Committed Phase 1 locally as `c1b07c8 feat: add structural portfolio prototype`.
 - Built the Phase 1 semantic single-page structure with profile panel, anchor navigation, projects, experience, contact, and footer.
 - Added typed Portuguese and English content files while rendering Portuguese as the temporary fallback.
 - Added three clearly labeled concept project cards.
@@ -24,7 +25,7 @@ Proceed with Phase 2 design system and restrained workspace vignette after resol
 ## Blockers and questions for Pedro
 
 - No Phase 0 blockers.
-- Push is pending because no `origin` remote is configured. Creating or connecting the GitHub repository still needs explicit repository visibility and remote authorization.
+- `git push origin main` failed because no `origin` remote is configured. Creating or connecting the GitHub repository still needs explicit repository visibility and remote authorization.
 - Later content still needed before replacing placeholders; see `docs/content-needed.md`.
 
 ## Validation performed
@@ -33,6 +34,7 @@ Proceed with Phase 2 design system and restrained workspace vignette after resol
 - `npm run type-check` passed.
 - `npm run build` passed after Phase 1. Production output was generated in `dist/` with Vite base path `/portfolio/`.
 - `npm run dev -- --host 127.0.0.1` started successfully at `http://127.0.0.1:5173/` after local port binding was approved.
+- `git push origin main` failed: no `origin` remote exists.
 
 ## Known issues
 
