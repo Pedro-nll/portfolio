@@ -52,6 +52,14 @@ Phase 4 added minimal placeholder résumé PDFs so the localized download links 
 
 Responsive smoke checks used headless Chrome screenshots at 1440 by 1000 and 390 by 844. The screenshots showed nonblank rendering, visible primary content, no obvious text overlap, and the workspace vignette remaining secondary. Lighthouse was not run because it is not installed in the project and no new quality dependency was added.
 
+## Phase 5 first real-content pass
+
+Pedro supplied résumé PDFs, a profile image, email, LinkedIn URLs, and specific guidance for experience/project selection. The public résumé files now use the supplied PDFs, and the profile panel uses the supplied photo.
+
+Experience currently focuses on Infoblox, dti digital, and Agencia Experimental de Software / Grade Inteligente because Pedro explicitly called out DTI and Infoblox and supplied Grade Inteligente context. Research and teaching assistant entries remain excluded until Pedro confirms whether they fit the portfolio positioning.
+
+The source files Pedro placed in `docs/` are ignored by git after being copied into `public/`; this avoids duplicating source assets in the public repository while keeping the served files in the app.
+
 ## Phase 0 scaffold details
 
 The Vite template resolved to React 19, TypeScript 6, Vite 8, and `oxlint`. These are accepted as scaffold defaults for Phase 0. Any future dependency additions require an explicit reason and should be recorded here or in `PROJECT_STATUS.md`.

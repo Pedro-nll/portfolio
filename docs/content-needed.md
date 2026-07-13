@@ -3,18 +3,18 @@
 Replace placeholders only with content supplied or explicitly approved by Pedro.
 
 - [x] Preferred displayed name: Pedro Lambert.
-- [ ] Portuguese professional headline.
-- [ ] English professional headline.
-- [ ] Short biography or positioning sentence in Portuguese.
-- [ ] Short biography or positioning sentence in English.
-- [ ] Real statistics and confirmation that they should appear.
-- [ ] Profile photograph.
+- [x] Portuguese professional headline.
+- [x] English professional headline.
+- [x] Short biography or positioning sentence in Portuguese.
+- [x] Short biography or positioning sentence in English.
+- [x] Real statistics currently shown: professional start year `2024` and `3` selected entries. Review wording before final deployment.
+- [x] Profile photograph.
 - [x] GitHub profile: `https://github.com/Pedro-nll`.
-- [ ] LinkedIn URL.
-- [ ] Public contact email.
-- [ ] Real Portuguese résumé PDF to replace placeholder at `public/resume/resume-pt.pdf`.
-- [ ] Real English résumé PDF to replace placeholder at `public/resume/resume-en.pdf`.
-- [ ] Real experience entries with approved titles, organizations, dates, and descriptions.
-- [ ] Real projects with approved names, descriptions, links, technologies, and images.
+- [x] LinkedIn URL: `https://www.linkedin.com/in/pedro-nllambert/` and English locale URL.
+- [x] Public contact email: `pedronll@outlook.com`.
+- [x] Real Portuguese résumé PDF at `public/resume/resume-pt.pdf`.
+- [x] Real English résumé PDF at `public/resume/resume-en.pdf`.
+- [ ] Final review of experience selection: currently includes Infoblox, dti digital, and Agencia Experimental de Software / Grade Inteligente. Confirm whether to add or exclude research and teaching assistant entries.
+- [ ] Real project details beyond Grade Inteligente. Two concept project cards still remain.
 - [x] GitHub username/profile handle: `Pedro-nll`.
 - [ ] Final canonical production URL after GitHub Pages is configured.

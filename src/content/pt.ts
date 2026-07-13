@@ -10,14 +10,15 @@ export const ptContent: PortfolioContent = {
   },
   profile: {
     name: 'Pedro Lambert',
-    role: '[Substituir] Desenvolvedor Java Backend',
+    role: 'Estagiario de engenharia de software na Infoblox',
     intro:
-      '[Substituir] Frase curta sobre o tipo de software, produtos e problemas que Pedro resolve.',
-    status: '[Substituir] Disponibilidade profissional a confirmar',
-    photoAlt: 'Foto profissional de Pedro Lambert pendente',
+      'Profissional fullstack com experiencia em .NET, React, Java, TypeScript, Spring Boot e Python.',
+    status: 'Estudante de Engenharia de Software na PUC Minas',
+    photoSrc: 'profile/pedro-lambert.jpg',
+    photoAlt: 'Foto profissional de Pedro Lambert',
     stats: [
-      { value: '[--]', label: 'anos de experiencia' },
-      { value: '3', label: 'projetos conceituais' },
+      { value: '2024', label: 'inicio profissional' },
+      { value: '3', label: 'experiencias selecionadas' },
     ],
   },
   nav: [
@@ -27,7 +28,7 @@ export const ptContent: PortfolioContent = {
   ],
   actions: {
     resume: 'Curriculo',
-    resumePending: 'PDF pendente',
+    resumePending: 'PDF em portugues',
     language: 'English',
     languageLabel: 'Alternar idioma para ingles',
     theme: {
@@ -41,7 +42,7 @@ export const ptContent: PortfolioContent = {
       eyebrow: 'Trabalho selecionado',
       title: 'Projetos',
       intro:
-        'Tres projetos conceituais estruturam o portfolio enquanto os trabalhos reais sao preparados.',
+        'Projeto real e amostras conceituais mostram foco em desenvolvimento full-stack, automacao e interfaces praticas.',
       linkLabels: {
         demo: 'Demo',
         demoPending: 'Demo pendente',
@@ -51,14 +52,14 @@ export const ptContent: PortfolioContent = {
       technologiesLabel: 'Tecnologias',
       items: [
         {
-          id: 'operations-dashboard',
-          title: 'Business Operations Dashboard',
-          type: 'Amostra full-stack',
-          statusLabel: 'Projeto conceitual',
+          id: 'grade-inteligente',
+          title: 'Grade Inteligente',
+          type: 'Projeto voluntario full-stack',
+          statusLabel: 'Projeto real',
           summary:
-            'Dashboard para acompanhar pedidos, receita, alertas operacionais e atividade recente.',
-          technologies: ['React', 'TypeScript', 'Java', 'Spring Boot', 'PostgreSQL'],
-          previewLabel: 'Previa de dashboard operacional',
+            'Sistema de gestao de matriz curricular para o Instituto de Ciencias Exatas e Informatica da PUC Minas, com cerca de 5 mil acessos na faculdade.',
+          technologies: ['Spring Framework', 'Desenvolvimento full-stack', 'Java'],
+          previewLabel: 'Previa conceitual do projeto Grade Inteligente',
           links: {},
         },
         {
@@ -89,15 +90,31 @@ export const ptContent: PortfolioContent = {
       eyebrow: 'Trajetoria',
       title: 'Experiencia',
       intro:
-        'Entradas reais ainda precisam ser fornecidas. Esta area mostra apenas a estrutura prevista.',
+        'Entradas selecionadas com foco em desenvolvimento de software aplicado e experiencia proxima a projetos reais.',
       items: [
         {
-          id: 'experience-placeholder',
-          title: '[Substituir] Cargo ou foco profissional',
-          organization: '[Substituir] Organizacao',
-          period: '[Substituir] Periodo',
+          id: 'infoblox',
+          title: 'Estagiario de engenharia de software',
+          organization: 'Infoblox',
+          period: 'abril de 2026 - atual',
           description:
-            '[Substituir] Descricao objetiva de responsabilidades, tecnologias e impacto confirmado.',
+            'Estagio atual em engenharia de software, listado no curriculo fornecido por Pedro.',
+        },
+        {
+          id: 'dti-digital',
+          title: 'Estagiario de desenvolvimento web fullstack',
+          organization: 'dti digital',
+          period: 'setembro de 2024 - agosto de 2025',
+          description:
+            'Experiencia profissional em desenvolvimento web full-stack em Belo Horizonte.',
+        },
+        {
+          id: 'agencia-experimental',
+          title: 'Desenvolvedor de software voluntario',
+          organization: 'Agencia Experimental de Software - PUC Minas',
+          period: 'agosto de 2023 - dezembro de 2024',
+          description:
+            'Participacao nos primeiros projetos e na estruturacao da agencia, incluindo o Grade Inteligente para a comunidade academica.',
         },
       ],
     },
@@ -105,11 +122,15 @@ export const ptContent: PortfolioContent = {
       eyebrow: 'Contato',
       title: 'Vamos conversar',
       intro:
-        'Use os links confirmados abaixo. Email e LinkedIn permanecem pendentes ate Pedro fornecer os dados.',
+        'Use os links confirmados abaixo para ver codigo, acompanhar a trajetoria profissional ou entrar em contato.',
       links: [
-        { label: 'GitHub', href: 'https://github.com/Pedro-nll' },
-        { label: 'LinkedIn', note: '[Substituir] URL pendente' },
-        { label: 'Email', note: '[Substituir] email publico pendente' },
+        { label: 'GitHub', href: 'https://github.com/Pedro-nll', external: true },
+        {
+          label: 'LinkedIn',
+          href: 'https://www.linkedin.com/in/pedro-nllambert/',
+          external: true,
+        },
+        { label: 'Email', href: 'mailto:pedronll@outlook.com' },
       ],
     },
   },

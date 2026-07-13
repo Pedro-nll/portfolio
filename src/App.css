@@ -35,7 +35,6 @@
 }
 
 .profile-photo {
-  align-items: center;
   aspect-ratio: 1;
   background:
     radial-gradient(circle at 34% 28%, rgb(255 255 255 / 0.34), transparent 32%),
@@ -44,10 +43,8 @@
   border-radius: 50%;
   box-shadow: inset 0 0 0 0.5rem color-mix(in srgb, var(--color-surface), transparent 50%);
   color: var(--color-accent-strong);
-  display: flex;
-  font-size: 2rem;
-  font-weight: 800;
-  justify-content: center;
+  display: block;
+  object-fit: cover;
   width: min(10rem, 48vw);
 }
 

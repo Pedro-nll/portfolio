@@ -9,6 +9,11 @@ lerna-debug.log*
 
 node_modules
 dist
+
+# Source files supplied for local content updates. Public copies live in public/.
+docs/Pedro_Lambert_Profile_English.pdf
+docs/profile-pt.pdf
+docs/pedro-profile-workana-200x200.jpg
 dist-ssr
 *.local
 

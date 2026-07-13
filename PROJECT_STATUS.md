@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Phase 4 complete - Quality pass.
+Phase 5 in progress - First real-content pass.
 
 ## Last completed work
 
@@ -29,6 +29,13 @@ Phase 4 complete - Quality pass.
 - Localized remaining structural accessible labels for profile, navigation, controls, and technology tag lists.
 - Ran static content and asset scans to confirm placeholders are marked and stale scaffold references were removed.
 - Ran headless Chrome desktop and mobile smoke screenshots.
+- Copied supplied real résumé PDFs into `public/resume/resume-pt.pdf` and `public/resume/resume-en.pdf`.
+- Copied supplied profile photo into `public/profile/pedro-lambert.jpg` and rendered it in the profile panel.
+- Added supplied email `pedronll@outlook.com` and LinkedIn URLs.
+- Replaced placeholder headline and introduction with résumé-supported Java, React, TypeScript, Spring Boot, Python, .NET, PUC Minas, and Infoblox positioning.
+- Added selected experience entries for Infoblox, dti digital, and Agencia Experimental de Software / Grade Inteligente.
+- Added Grade Inteligente as the first real project and kept two concept project cards for now.
+- Updated metadata description to remove placeholder wording.
 
 ## In progress
 
@@ -36,11 +43,13 @@ Phase 4 complete - Quality pass.
 
 ## Next recommended action
 
-Proceed with Phase 5 real content after Pedro supplies approved résumé PDFs, profile photo, contact links, experience entries, and real project details.
+Ask Pedro to review the first real-content pass and confirm whether to add or exclude research, teaching assistant entries, and any additional real projects.
 
 ## Blockers and questions for Pedro
 
-- Phase 5 is blocked on real content from Pedro; see `docs/content-needed.md`.
+- Confirm whether to keep the current experience selection: Infoblox, dti digital, and Agencia Experimental de Software / Grade Inteligente.
+- Confirm whether research and teaching assistant résumé entries should stay excluded.
+- Provide real details, links, and images for any additional projects that should replace the remaining concept cards.
 
 ## Validation performed
 
@@ -65,34 +74,33 @@ Proceed with Phase 5 real content after Pedro supplies approved résumé PDFs, p
 - `npm run dev -- --host 127.0.0.1` started successfully at `http://127.0.0.1:5173/` after Phase 4.
 - Headless Chrome desktop screenshot saved to `/tmp/portfolio-desktop.png`; no obvious blank render or overlap observed.
 - Headless Chrome mobile screenshot saved to `/tmp/portfolio-mobile.png`; no obvious blank render or overlap observed at 390px width.
+- `npm run lint` passed after the first Phase 5 content update.
+- `npm run type-check` passed after the first Phase 5 content update.
+- `npm run build` passed after the first Phase 5 content update. Production output includes the supplied 2-page résumé PDFs and profile image.
+- Headless Chrome desktop screenshot saved to `/tmp/portfolio-phase5-desktop.png`; the real profile photo rendered and no obvious desktop overlap was observed.
 - `npm run dev -- --host 127.0.0.1` started successfully at `http://127.0.0.1:5173/` after local port binding was approved.
 - `gh repo create portfolio --public --source=. --remote=origin --push` succeeded.
 - `git status --short --branch` shows `main...origin/main`.
 
 ## Known issues
 
-- Real résumé PDFs, profile photo, experience entries, contact email, LinkedIn URL, and project details are not supplied yet.
-- Current résumé PDFs are placeholders and must be replaced before final content/deployment.
+- Two concept project cards still remain.
+- The current experience selection is intentionally conservative and needs Pedro's review before finalizing Phase 5.
 - Lighthouse was not run in Phase 4 because it is not installed in the project and no new dependency was added.
 
 ## Files changed in the latest session
 
 - `PROJECT_STATUS.md`
+- `.gitignore`
 - `docs/decisions.md`
 - `docs/content-needed.md`
-- `public/favicon.svg`
-- `public/icons.svg` removed
+- `index.html`
+- `public/profile/pedro-lambert.jpg`
 - `public/resume/resume-en.pdf`
 - `public/resume/resume-pt.pdf`
-- `src/assets/hero.png` removed
-- `src/assets/react.svg` removed
-- `src/assets/vite.svg` removed
-- `src/App.tsx`
-- `src/components/AppShell.tsx`
-- `src/components/Navigation.tsx`
+- `src/App.css`
+- `src/components/ContactLinks.tsx`
 - `src/components/ProfilePanel.tsx`
-- `src/components/ProjectCard.tsx`
-- `src/components/ProjectsSection.tsx`
 - `src/content/en.ts`
 - `src/content/pt.ts`
 - `src/content/types.ts`

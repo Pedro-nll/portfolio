@@ -21,13 +21,18 @@ export function ProfilePanel({
   const { profile, actions, nav } = content
   const resumeFile = content.language === 'en' ? 'resume-en.pdf' : 'resume-pt.pdf'
   const resumeHref = `${import.meta.env.BASE_URL}resume/${resumeFile}`
+  const profilePhotoSrc = `${import.meta.env.BASE_URL}${profile.photoSrc}`
   const nextThemeLabel = theme === 'dark' ? actions.theme.light : actions.theme.dark
 
   return (
     <aside className="profile-panel" aria-label={content.aria.profile}>
-      <div className="profile-photo" role="img" aria-label={profile.photoAlt}>
-        PL
-      </div>
+      <img
+        className="profile-photo"
+        src={profilePhotoSrc}
+        width="200"
+        height="200"
+        alt={profile.photoAlt}
+      />
 
       <div className="profile-copy">
         <p className="eyebrow">{profile.status}</p>

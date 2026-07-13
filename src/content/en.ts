@@ -10,14 +10,15 @@ export const enContent: PortfolioContent = {
   },
   profile: {
     name: 'Pedro Lambert',
-    role: '[Replace] Java Backend Developer',
+    role: 'Software Engineering Intern at Infoblox',
     intro:
-      '[Replace] Short sentence about the software, products, and problems Pedro works on.',
-    status: '[Replace] Professional availability to confirm',
-    photoAlt: 'Professional photo of Pedro Lambert pending',
+      'Full-stack professional with experience in .NET, React, Java, TypeScript, Spring Boot, and Python.',
+    status: 'Software Engineering student at PUC Minas',
+    photoSrc: 'profile/pedro-lambert.jpg',
+    photoAlt: 'Professional photo of Pedro Lambert',
     stats: [
-      { value: '[--]', label: 'years of experience' },
-      { value: '3', label: 'concept projects' },
+      { value: '2024', label: 'professional start' },
+      { value: '3', label: 'selected entries' },
     ],
   },
   nav: [
@@ -27,7 +28,7 @@ export const enContent: PortfolioContent = {
   ],
   actions: {
     resume: 'Resume',
-    resumePending: 'PDF pending',
+    resumePending: 'English PDF',
     language: 'Portugues',
     languageLabel: 'Switch language to Portuguese',
     theme: {
@@ -41,7 +42,7 @@ export const enContent: PortfolioContent = {
       eyebrow: 'Selected work',
       title: 'Projects',
       intro:
-        'Three concept projects structure the portfolio while real work samples are prepared.',
+        'A real project and concept samples show focus across full-stack development, automation, and practical interfaces.',
       linkLabels: {
         demo: 'Demo',
         demoPending: 'Demo pending',
@@ -51,14 +52,14 @@ export const enContent: PortfolioContent = {
       technologiesLabel: 'Technologies',
       items: [
         {
-          id: 'operations-dashboard',
-          title: 'Business Operations Dashboard',
-          type: 'Full-stack sample',
-          statusLabel: 'Concept project',
+          id: 'grade-inteligente',
+          title: 'Grade Inteligente',
+          type: 'Volunteer full-stack project',
+          statusLabel: 'Real project',
           summary:
-            'A dashboard for monitoring orders, revenue, operational alerts, and recent activity.',
-          technologies: ['React', 'TypeScript', 'Java', 'Spring Boot', 'PostgreSQL'],
-          previewLabel: 'Operational dashboard preview',
+            'Curriculum matrix management system for PUC Minas ICEI units, with about 5,000 accesses at the university.',
+          technologies: ['Spring Framework', 'Full-stack development', 'Java'],
+          previewLabel: 'Conceptual preview of the Grade Inteligente project',
           links: {},
         },
         {
@@ -89,15 +90,31 @@ export const enContent: PortfolioContent = {
       eyebrow: 'Background',
       title: 'Experience',
       intro:
-        'Real entries still need to be supplied. This area currently shows only the intended structure.',
+        'Selected entries focused on applied software development and experience close to real project delivery.',
       items: [
         {
-          id: 'experience-placeholder',
-          title: '[Replace] Role or professional focus',
-          organization: '[Replace] Organization',
-          period: '[Replace] Period',
+          id: 'infoblox',
+          title: 'Software Engineering Intern',
+          organization: 'Infoblox',
+          period: 'April 2026 - Present',
           description:
-            '[Replace] Objective description of responsibilities, technologies, and confirmed impact.',
+            'Current software engineering internship, listed in the resume supplied by Pedro.',
+        },
+        {
+          id: 'dti-digital',
+          title: 'Full-Stack Web Development Intern',
+          organization: 'dti digital',
+          period: 'September 2024 - August 2025',
+          description:
+            'Professional full-stack web development experience in Belo Horizonte.',
+        },
+        {
+          id: 'agencia-experimental',
+          title: 'Volunteer Software Developer',
+          organization: 'Agencia Experimental de Software - PUC Minas',
+          period: 'August 2023 - December 2024',
+          description:
+            'Helped with early projects and agency structure, including Grade Inteligente for the academic community.',
         },
       ],
     },
@@ -105,11 +122,15 @@ export const enContent: PortfolioContent = {
       eyebrow: 'Contact',
       title: 'Let us talk',
       intro:
-        'Use the confirmed links below. Email and LinkedIn remain pending until Pedro supplies them.',
+        'Use the confirmed links below to view code, follow the professional profile, or get in touch.',
       links: [
-        { label: 'GitHub', href: 'https://github.com/Pedro-nll' },
-        { label: 'LinkedIn', note: '[Replace] URL pending' },
-        { label: 'Email', note: '[Replace] public email pending' },
+        { label: 'GitHub', href: 'https://github.com/Pedro-nll', external: true },
+        {
+          label: 'LinkedIn',
+          href: 'https://www.linkedin.com/in/pedro-nllambert/?locale=en-US',
+          external: true,
+        },
+        { label: 'Email', href: 'mailto:pedronll@outlook.com' },
       ],
     },
   },

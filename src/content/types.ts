@@ -26,6 +26,7 @@ export type SocialLink = {
   label: string
   href?: string
   note?: string
+  external?: boolean
 }
 
 export type PortfolioContent = {
@@ -41,6 +42,7 @@ export type PortfolioContent = {
     role: string
     intro: string
     status: string
+    photoSrc: string
     photoAlt: string
     stats: Array<{
       value: string
