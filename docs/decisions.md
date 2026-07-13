@@ -28,6 +28,14 @@ Desktop will use a left profile panel and right content column. Mobile will use 
 
 Phase 1 renders Portuguese content as the temporary fallback while keeping English content typed in a separate file for later preference handling. The language and theme controls are visible but disabled until their persistence behavior is implemented in Phase 3. Project previews are CSS placeholders rather than sourced images so no unapproved assets or claims are introduced.
 
+## Phase 2 visual system and vignette
+
+Phase 2 uses a warm off-white, brown-gray, muted green, and walnut palette for the light theme, with a restrained charcoal/green dark preference through CSS media queries. The visual system is defined in `src/styles/tokens.css` with semantic and illustration-specific custom properties.
+
+The workspace vignette is an inline decorative SVG component using simple shelves, books, a desk, monitor, plant, and lamp. It is `aria-hidden`, theme-aware through CSS variables, and placed low in the profile panel so it cannot compete with project cards.
+
+No dependencies were added for Phase 2. Motion remains limited to short focus, hover, and skip-link transitions, with reduced-motion support disabling nonessential transition duration.
+
 ## Phase 0 scaffold details
 
 The Vite template resolved to React 19, TypeScript 6, Vite 8, and `oxlint`. These are accepted as scaffold defaults for Phase 0. Any future dependency additions require an explicit reason and should be recorded here or in `PROJECT_STATUS.md`.

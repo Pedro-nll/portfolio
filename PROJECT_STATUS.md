@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Phase 1 complete - Structural prototype.
+Phase 2 complete - Design system and restrained workspace vignette.
 
 ## Last completed work
 
@@ -15,6 +15,9 @@ Phase 1 complete - Structural prototype.
 - Added three clearly labeled concept project cards.
 - Added placeholder experience and pending contact fields without inventing unverified claims or links.
 - Added responsive structural CSS for desktop two-column layout and mobile natural scroll with sticky navigation.
+- Added semantic CSS tokens in `src/styles/tokens.css` for light/dark palette, surfaces, borders, focus, shadows, and illustration colors.
+- Polished typography, spacing, project card hierarchy, focus states, responsive surfaces, and reduced-motion behavior.
+- Added a restrained decorative workspace SVG vignette in the profile panel.
 
 ## In progress
 
@@ -22,11 +25,11 @@ Phase 1 complete - Structural prototype.
 
 ## Next recommended action
 
-Proceed with Phase 2 design system and restrained workspace vignette.
+Proceed with Phase 3 localization and preferences: language switching, theme switching, active navigation state, document `lang`, and locale-aware résumé behavior.
 
 ## Blockers and questions for Pedro
 
-- No current blockers for Phase 2.
+- No current blockers for Phase 3 implementation.
 - Later content still needed before replacing placeholders; see `docs/content-needed.md`.
 
 ## Validation performed
@@ -34,13 +37,17 @@ Proceed with Phase 2 design system and restrained workspace vignette.
 - `npm run lint` passed.
 - `npm run type-check` passed.
 - `npm run build` passed after Phase 1. Production output was generated in `dist/` with Vite base path `/portfolio/`.
+- `npm run lint` passed after Phase 2.
+- `npm run type-check` passed after Phase 2.
+- `npm run build` passed after Phase 2. Production output was generated in `dist/` with Vite base path `/portfolio/`.
+- `npm run dev -- --host 127.0.0.1` started successfully at `http://127.0.0.1:5173/` after Phase 2.
 - `npm run dev -- --host 127.0.0.1` started successfully at `http://127.0.0.1:5173/` after local port binding was approved.
 - `gh repo create portfolio --public --source=. --remote=origin --push` succeeded.
 - `git status --short --branch` shows `main...origin/main`.
 
 ## Known issues
 
-- Theme toggle, language toggle, active navigation state, résumé locale switching, and the decorative workspace vignette are not implemented yet.
+- Theme toggle, language toggle, active navigation state, résumé locale switching, and document language updates are not implemented yet.
 - The résumé link points to the planned base-path-safe placeholder path, but the PDF files are not present yet.
 - Real résumé PDFs, profile photo, experience entries, contact email, LinkedIn URL, and project details are not supplied yet.
 - The Vite scaffold still includes unused starter assets under `src/assets/` and `public/icons.svg`; they are not referenced by the app.
@@ -68,10 +75,12 @@ Proceed with Phase 2 design system and restrained workspace vignette.
 - `src/components/ProfilePanel.tsx`
 - `src/components/ProjectCard.tsx`
 - `src/components/ProjectsSection.tsx`
+- `src/components/WorkspaceVignette.tsx`
 - `src/content/en.ts`
 - `src/content/pt.ts`
 - `src/content/types.ts`
 - `src/index.css`
+- `src/styles/tokens.css`
 - `tsconfig.app.json`
 - `tsconfig.json`
 - `tsconfig.node.json`

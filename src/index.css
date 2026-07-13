@@ -1,15 +1,6 @@
-:root {
-  --color-background: #fbf7ef;
-  --color-surface: #fffdf8;
-  --color-text: #25211d;
-  --color-muted: #655e55;
-  --color-accent: #346f55;
-  --color-border: #ded4c5;
-  --color-soft: #f2eadf;
-  --font-sans:
-    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    sans-serif;
+@import './styles/tokens.css';
 
+:root {
   color: var(--color-text);
   background: var(--color-background);
   font: 18px/1.55 var(--font-sans);
@@ -19,23 +10,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: #171a17;
-    --color-surface: #20241f;
-    --color-text: #f5efe4;
-    --color-muted: #c7beb1;
-    --color-accent: #8fca9d;
-    --color-border: #3a4037;
-    --color-soft: #252b24;
-  }
-}
-
 #root {
   min-height: 100svh;
 }
 
 body {
+  background:
+    linear-gradient(180deg, var(--color-background), var(--color-background-elevated));
   margin: 0;
 }
 
@@ -48,19 +29,25 @@ html {
 }
 
 h1 {
-  font-size: clamp(2.75rem, 6vw, 5rem);
+  font-size: clamp(3rem, 7vw, 5.7rem);
+  font-weight: 760;
+  letter-spacing: 0;
   line-height: 0.92;
   margin: 0;
 }
 
 h2 {
   font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 720;
+  letter-spacing: 0;
   line-height: 1;
   margin: 0;
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
+  font-weight: 720;
+  letter-spacing: 0;
   line-height: 1.2;
   margin: 0;
 }
@@ -77,7 +64,8 @@ a {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 3px solid var(--color-accent);
+  box-shadow: var(--shadow-focus);
+  outline: 2px solid var(--color-focus);
   outline-offset: 4px;
 }
 
@@ -90,5 +78,6 @@ button {
   *::before,
   *::after {
     scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }

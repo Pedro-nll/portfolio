@@ -1,5 +1,6 @@
 import type { PortfolioContent } from '../content/types'
 import { Navigation } from './Navigation'
+import { WorkspaceVignette } from './WorkspaceVignette'
 
 type ProfilePanelProps = {
   content: PortfolioContent
@@ -44,6 +45,8 @@ export function ProfilePanel({ content }: ProfilePanelProps) {
           {actions.theme}
         </button>
       </div>
+
+      <WorkspaceVignette />
     </aside>
   )
 }
