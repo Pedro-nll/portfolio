@@ -17,4 +17,4 @@ Replace placeholders only with content supplied or explicitly approved by Pedro.
 - [x] Final review of experience selection: keep Infoblox, dti digital, and Agencia Experimental de Software / Grade Inteligente; exclude research and teaching assistant entries.
 - [ ] Real project details beyond Grade Inteligente. Two concept project cards intentionally remain for now.
 - [x] GitHub username/profile handle: `Pedro-nll`.
-- [ ] Final canonical production URL after GitHub Pages is configured.
+- [x] Final canonical production URL: `https://pedro-nll.github.io/portfolio/`.

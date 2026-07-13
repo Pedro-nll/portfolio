@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Phase 6 in progress - GitHub Pages deployment.
+Phase 6 complete - GitHub Pages deployment.
 
 ## Last completed work
 
@@ -41,6 +41,9 @@ Phase 6 in progress - GitHub Pages deployment.
 - Added `.github/workflows/deploy.yml` for GitHub Pages deployment through GitHub Actions.
 - Enabled GitHub Pages with `build_type=workflow`.
 - GitHub Pages reports the production URL as `https://pedro-nll.github.io/portfolio/`.
+- Verified the first Pages deployment run completed successfully.
+- Verified the live page, profile image, and English résumé asset returned HTTP 200.
+- Updated canonical and Open Graph URLs to the lowercase live GitHub Pages URL.
 
 ## In progress
 
@@ -48,11 +51,10 @@ Phase 6 in progress - GitHub Pages deployment.
 
 ## Next recommended action
 
-Push the deployment workflow, wait for the Pages workflow to complete, and verify `https://pedro-nll.github.io/portfolio/`.
+Review the live site at `https://pedro-nll.github.io/portfolio/` and decide whether to replace the two remaining concept cards before any final polish pass.
 
 ## Blockers and questions for Pedro
 
-- No current deployment blockers.
 - Two concept project cards intentionally remain until Pedro supplies additional real project details.
 
 ## Validation performed
@@ -89,6 +91,10 @@ Push the deployment workflow, wait for the Pages workflow to complete, and verif
 - `npm run type-check` passed before adding the deployment workflow.
 - `npm run build` passed before adding the deployment workflow.
 - `gh api --method POST repos/Pedro-nll/portfolio/pages -f build_type=workflow` succeeded and returned `https://pedro-nll.github.io/portfolio/`.
+- GitHub Actions deployment run `29286850441` completed with conclusion `success`.
+- `curl -I https://pedro-nll.github.io/portfolio/` returned HTTP 200.
+- `curl -I https://pedro-nll.github.io/portfolio/profile/pedro-lambert.jpg` returned HTTP 200.
+- `curl -I https://pedro-nll.github.io/portfolio/resume/resume-en.pdf` returned HTTP 200.
 - `npm run dev -- --host 127.0.0.1` started successfully at `http://127.0.0.1:5173/` after local port binding was approved.
 - `gh repo create portfolio --public --source=. --remote=origin --push` succeeded.
 - `git status --short --branch` shows `main...origin/main`.
@@ -103,4 +109,6 @@ Push the deployment workflow, wait for the Pages workflow to complete, and verif
 
 - `PROJECT_STATUS.md`
 - `.github/workflows/deploy.yml`
+- `docs/content-needed.md`
 - `docs/decisions.md`
+- `index.html`
