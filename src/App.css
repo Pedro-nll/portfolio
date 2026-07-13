@@ -1,0 +1,17 @@
+.phase-zero {
+  display: grid;
+  gap: 1rem;
+  margin: 0 auto;
+  max-width: 42rem;
+  min-height: 100svh;
+  padding: 4rem 1.5rem;
+  place-content: center;
+}
+
+.eyebrow {
+  color: var(--color-accent);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
