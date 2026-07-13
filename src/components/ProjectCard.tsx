@@ -9,9 +9,15 @@ type ProjectCardProps = {
     source: string
     sourcePending: string
   }
+  technologiesLabel: string
 }
 
-export function ProjectCard({ project, index, linkLabels }: ProjectCardProps) {
+export function ProjectCard({
+  project,
+  index,
+  linkLabels,
+  technologiesLabel,
+}: ProjectCardProps) {
   return (
     <article className="project-card">
       <div
@@ -32,7 +38,7 @@ export function ProjectCard({ project, index, linkLabels }: ProjectCardProps) {
         <h3>{project.title}</h3>
         <p>{project.summary}</p>
 
-        <ul className="tag-list" aria-label="Technologies">
+        <ul className="tag-list" aria-label={technologiesLabel}>
           {project.technologies.map((technology) => (
             <li key={technology}>{technology}</li>
           ))}

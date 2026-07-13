@@ -21,6 +21,7 @@ export function ProjectsSection({ content }: ProjectsSectionProps) {
             project={project}
             index={index}
             linkLabels={content.linkLabels}
+            technologiesLabel={content.technologiesLabel}
           />
         ))}
       </div>

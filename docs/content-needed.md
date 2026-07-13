@@ -12,8 +12,8 @@ Replace placeholders only with content supplied or explicitly approved by Pedro.
 - [x] GitHub profile: `https://github.com/Pedro-nll`.
 - [ ] LinkedIn URL.
 - [ ] Public contact email.
-- [ ] Portuguese résumé PDF for `public/resume/resume-pt.pdf`.
-- [ ] English résumé PDF for `public/resume/resume-en.pdf`.
+- [ ] Real Portuguese résumé PDF to replace placeholder at `public/resume/resume-pt.pdf`.
+- [ ] Real English résumé PDF to replace placeholder at `public/resume/resume-en.pdf`.
 - [ ] Real experience entries with approved titles, organizations, dates, and descriptions.
 - [ ] Real projects with approved names, descriptions, links, technologies, and images.
 - [x] GitHub username/profile handle: `Pedro-nll`.

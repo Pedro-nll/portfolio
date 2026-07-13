@@ -3,11 +3,12 @@ import type { PortfolioContent } from '../content/types'
 type NavigationProps = {
   items: PortfolioContent['nav']
   activeSection: PortfolioContent['nav'][number]['id']
+  label: string
 }
 
-export function Navigation({ items, activeSection }: NavigationProps) {
+export function Navigation({ items, activeSection, label }: NavigationProps) {
   return (
-    <nav className="site-nav" aria-label="Portfolio sections">
+    <nav className="site-nav" aria-label={label}>
       {items.map((item) => (
         <a
           key={item.id}

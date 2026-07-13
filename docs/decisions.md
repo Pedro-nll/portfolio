@@ -26,7 +26,7 @@ Desktop will use a left profile panel and right content column. Mobile will use 
 
 ## Phase 1 structural prototype
 
-Phase 1 renders Portuguese content as the temporary fallback while keeping English content typed in a separate file for later preference handling. The language and theme controls are visible but disabled until their persistence behavior is implemented in Phase 3. Project previews are CSS placeholders rather than sourced images so no unapproved assets or claims are introduced.
+Phase 1 rendered Portuguese content as the temporary fallback while keeping English content typed in a separate file for later preference handling. Project previews are CSS placeholders rather than sourced images so no unapproved assets or claims are introduced.
 
 ## Phase 2 visual system and vignette
 
@@ -42,9 +42,15 @@ Phase 3 implements language and theme preferences with small React hooks and `lo
 
 Theme preference is stored explicitly as `light` or `dark` and applied through `document.documentElement.dataset.theme`. The first load still respects the operating-system preference before an explicit choice exists.
 
-The résumé control now builds a base-path-safe URL for `resume-pt.pdf` or `resume-en.pdf` according to the active language. The PDF files remain placeholders to be supplied later.
+The résumé control now builds a base-path-safe URL for `resume-pt.pdf` or `resume-en.pdf` according to the active language. Placeholder PDF files exist in `public/resume/` and must be replaced with real supplied résumé files.
 
 Active section state uses `IntersectionObserver` and `aria-current` on anchor links. The active state is shown with weight and an inset marker, not color alone.
+
+## Phase 4 quality pass
+
+Phase 4 added minimal placeholder résumé PDFs so the localized download links resolve until real files are supplied. It also replaced the default Vite favicon with an original `PL` favicon and removed unused Vite starter assets.
+
+Responsive smoke checks used headless Chrome screenshots at 1440 by 1000 and 390 by 844. The screenshots showed nonblank rendering, visible primary content, no obvious text overlap, and the workspace vignette remaining secondary. Lighthouse was not run because it is not installed in the project and no new quality dependency was added.
 
 ## Phase 0 scaffold details
 

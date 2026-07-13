@@ -39,7 +39,11 @@ export function AppShell({
         />
 
         <div className="mobile-nav">
-          <Navigation items={content.nav} activeSection={activeSection} />
+          <Navigation
+            items={content.nav}
+            activeSection={activeSection}
+            label={content.aria.navigation}
+          />
         </div>
 
         <main className="content-column" id="main-content">

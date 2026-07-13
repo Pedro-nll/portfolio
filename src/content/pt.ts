@@ -3,6 +3,11 @@ import type { PortfolioContent } from './types'
 export const ptContent: PortfolioContent = {
   language: 'pt-BR',
   skipLink: 'Pular para o conteudo principal',
+  aria: {
+    profile: 'Resumo do perfil',
+    navigation: 'Secoes do portfolio',
+    controls: 'Controles do portfolio',
+  },
   profile: {
     name: 'Pedro Lambert',
     role: '[Substituir] Desenvolvedor Java Backend',
@@ -43,6 +48,7 @@ export const ptContent: PortfolioContent = {
         source: 'Codigo',
         sourcePending: 'Codigo pendente',
       },
+      technologiesLabel: 'Tecnologias',
       items: [
         {
           id: 'operations-dashboard',

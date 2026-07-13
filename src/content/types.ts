@@ -31,6 +31,11 @@ export type SocialLink = {
 export type PortfolioContent = {
   language: 'pt-BR' | 'en'
   skipLink: string
+  aria: {
+    profile: string
+    navigation: string
+    controls: string
+  }
   profile: {
     name: string
     role: string
@@ -68,6 +73,7 @@ export type PortfolioContent = {
         source: string
         sourcePending: string
       }
+      technologiesLabel: string
       items: Project[]
     }
     experience: {

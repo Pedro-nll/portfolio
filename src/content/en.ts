@@ -3,6 +3,11 @@ import type { PortfolioContent } from './types'
 export const enContent: PortfolioContent = {
   language: 'en',
   skipLink: 'Skip to main content',
+  aria: {
+    profile: 'Profile summary',
+    navigation: 'Portfolio sections',
+    controls: 'Portfolio controls',
+  },
   profile: {
     name: 'Pedro Lambert',
     role: '[Replace] Java Backend Developer',
@@ -43,6 +48,7 @@ export const enContent: PortfolioContent = {
         source: 'Source',
         sourcePending: 'Source pending',
       },
+      technologiesLabel: 'Technologies',
       items: [
         {
           id: 'operations-dashboard',

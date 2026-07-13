@@ -24,7 +24,7 @@ export function ProfilePanel({
   const nextThemeLabel = theme === 'dark' ? actions.theme.light : actions.theme.dark
 
   return (
-    <aside className="profile-panel" aria-label="Profile summary">
+    <aside className="profile-panel" aria-label={content.aria.profile}>
       <div className="profile-photo" role="img" aria-label={profile.photoAlt}>
         PL
       </div>
@@ -45,9 +45,9 @@ export function ProfilePanel({
         ))}
       </dl>
 
-      <Navigation items={nav} activeSection={activeSection} />
+      <Navigation items={nav} activeSection={activeSection} label={content.aria.navigation} />
 
-      <div className="profile-actions" aria-label="Portfolio controls">
+      <div className="profile-actions" aria-label={content.aria.controls}>
         <a className="button primary resume-button" href={resumeHref}>
           <span>{actions.resume}</span>
           <small>{actions.resumePending}</small>
