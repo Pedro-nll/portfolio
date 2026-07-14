@@ -10,7 +10,7 @@ export const ptContent: PortfolioContent = {
   },
   profile: {
     name: 'Pedro Lambert',
-    role: 'Estagiario de engenharia de software na Infoblox',
+    role: 'Engenharia de software na Infoblox',
     intro:
       'Profissional fullstack com experiencia em .NET, React, Java, TypeScript, Spring Boot e Python.',
     status: 'Estudante de Engenharia de Software na PUC Minas',

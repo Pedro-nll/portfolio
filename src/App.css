@@ -1,12 +1,13 @@
 .skip-link {
   background: var(--color-text);
+  border-radius: var(--radius-sm);
   color: var(--color-background);
   left: 1rem;
   padding: 0.75rem 1rem;
   position: fixed;
   top: 1rem;
-  transition: transform 160ms ease;
   transform: translateY(-150%);
+  transition: transform 160ms ease;
   z-index: 20;
 }
 
@@ -16,168 +17,247 @@
 
 .app-shell {
   display: grid;
-  grid-template-columns: minmax(20rem, 38vw) minmax(0, 1fr);
-  min-height: 100svh;
+  gap: clamp(1.5rem, 2.2vw, 2rem);
+  grid-template-columns: minmax(20rem, 38%) minmax(0, 1fr);
+  height: 100dvh;
+  overflow: hidden;
+  padding: clamp(1.5rem, 2.3vw, 2rem);
 }
 
 .profile-panel {
-  align-content: start;
-  background:
-    linear-gradient(180deg, var(--color-surface), var(--color-background-elevated));
-  border-right: 1px solid var(--color-border);
   display: grid;
-  gap: clamp(1rem, 2.2vw, 1.5rem);
-  min-height: 100svh;
+  grid-template-rows: auto auto auto auto 1fr auto;
+  min-height: 0;
   overflow: hidden;
-  padding: clamp(1.5rem, 4vw, 3rem) clamp(1.25rem, 3.4vw, 2.75rem);
-  position: sticky;
-  top: 0;
+  padding: clamp(0.25rem, 0.5vw, 0.5rem) clamp(0.75rem, 1.8vw, 1.5rem);
+  position: relative;
+}
+
+.utility-controls {
+  align-items: center;
+  display: flex;
+  gap: 0.65rem;
+  justify-content: flex-end;
+  margin-bottom: clamp(1.2rem, 2.5vh, 2rem);
+  position: relative;
+  z-index: 3;
+}
+
+.icon-control {
+  align-items: center;
+  background: color-mix(in srgb, var(--color-surface), transparent 18%);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  color: var(--color-text);
+  display: inline-flex;
+  flex: 0 0 auto;
+  height: 2.75rem;
+  justify-content: center;
+  min-width: 2.75rem;
+  padding: 0;
+  position: relative;
+  text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.icon-control:hover {
+  background: var(--color-accent-soft);
+  border-color: var(--color-accent);
+}
+
+.icon-control.is-selected {
+  border-color: var(--color-accent-strong);
+  box-shadow: inset 0 0 0 2px var(--color-surface);
+}
+
+.icon-control.is-selected::after {
+  background: var(--color-accent-strong);
+  border: 2px solid var(--color-surface);
+  border-radius: 999px;
+  bottom: 0.18rem;
+  content: '';
+  height: 0.55rem;
+  position: absolute;
+  right: 0.18rem;
+  width: 0.55rem;
+}
+
+.icon-control svg {
+  fill: currentColor;
+  height: 1.35rem;
+  width: 1.35rem;
+}
+
+.flag-icon {
+  display: block;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.control-tooltip {
+  background: var(--color-text);
+  border-radius: var(--radius-sm);
+  color: var(--color-background);
+  font-size: 0.78rem;
+  font-weight: 700;
+  left: 50%;
+  line-height: 1.1;
+  opacity: 0;
+  padding: 0.35rem 0.45rem;
+  pointer-events: none;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  transform: translateX(-50%) translateY(-0.15rem);
+  transition:
+    opacity 120ms ease,
+    transform 120ms ease;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.icon-control:hover .control-tooltip,
+.icon-control:focus-visible .control-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.profile-identity {
+  align-items: center;
+  display: grid;
+  gap: clamp(1rem, 2.2vw, 1.6rem);
+  grid-template-columns: minmax(7.5rem, 10.5rem) minmax(0, 1fr);
+  margin-bottom: clamp(1.2rem, 2.5vh, 1.8rem);
+  position: relative;
+  z-index: 2;
 }
 
 .profile-photo {
   aspect-ratio: 1;
-  background:
-    radial-gradient(circle at 34% 28%, rgb(255 255 255 / 0.34), transparent 32%),
-    var(--color-accent-soft);
+  background: var(--color-accent-soft);
   border: 1px solid var(--color-border);
   border-radius: 50%;
-  box-shadow: inset 0 0 0 0.5rem color-mix(in srgb, var(--color-surface), transparent 50%);
-  color: var(--color-accent-strong);
+  box-shadow: 0 12px 28px rgb(var(--color-shadow) / 0.08);
   display: block;
   object-fit: cover;
-  width: min(10rem, 48vw);
+  width: 100%;
+}
+
+.profile-title {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 0;
 }
 
 .profile-copy {
   display: grid;
-  gap: 0.75rem;
+  gap: 0.65rem;
+  margin-bottom: clamp(1.35rem, 3vh, 2rem);
+  max-width: 32rem;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .eyebrow,
 .project-meta,
 .timeline-period {
   color: var(--color-accent);
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .role {
-  color: var(--color-text);
-  font-size: 1.2rem;
+  color: color-mix(in srgb, var(--color-text), var(--color-accent) 34%);
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
   font-weight: 700;
 }
 
 .intro {
+  font-size: clamp(0.98rem, 1.1vw, 1.08rem);
   max-width: 34rem;
 }
 
-.stats {
-  display: grid;
-  gap: 0.75rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin: 0;
-}
-
-.stats div {
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  padding: 0.85rem;
-}
-
-.stats dt {
-  font-size: 1.4rem;
-  font-weight: 800;
-}
-
-.stats dd {
-  color: var(--color-muted);
-  margin: 0;
-}
-
 .site-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  align-content: start;
+  display: grid;
+  gap: 0.55rem;
+  justify-items: start;
+  position: relative;
+  z-index: 2;
 }
 
-.site-nav a,
-.button {
-  align-items: center;
-  background: color-mix(in srgb, var(--color-surface), transparent 30%);
-  border: 1px solid var(--color-border);
+.site-nav a {
   border-radius: var(--radius-sm);
   color: var(--color-text);
   display: inline-flex;
-  justify-content: center;
-  min-height: 2.75rem;
-  padding: 0.65rem 0.9rem;
+  font-size: 1rem;
+  min-height: 2.35rem;
+  padding: 0.35rem 0.35rem 0.35rem 1.45rem;
+  position: relative;
   text-decoration: none;
   transition:
-    background-color 160ms ease,
-    border-color 160ms ease,
     color 160ms ease,
     transform 160ms ease;
 }
 
+.site-nav a::before {
+  background: transparent;
+  border-radius: 999px;
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 3px;
+}
+
 .site-nav a:hover,
-.site-nav a[aria-current='true'],
-.button:hover {
-  background: var(--color-accent-soft);
-  border-color: var(--color-accent);
+.site-nav a[aria-current='true'] {
+  color: var(--color-accent-strong);
 }
 
 .site-nav a[aria-current='true'] {
-  box-shadow: inset 0 -3px 0 var(--color-accent);
-  color: var(--color-accent-strong);
   font-weight: 800;
 }
 
-.button {
-  background: color-mix(in srgb, var(--color-surface), transparent 28%);
-}
-
-.button.primary {
+.site-nav a[aria-current='true']::before {
   background: var(--color-accent);
-  border-color: var(--color-accent);
-  color: var(--color-background);
 }
 
-.button.primary:hover {
-  background: var(--color-accent-strong);
-}
-
-.resume-button {
-  align-items: flex-start;
-  display: inline-flex;
-  flex-direction: column;
-  gap: 0.1rem;
-}
-
-.resume-button small {
-  font-size: 0.72rem;
-  font-weight: 700;
-  opacity: 0.82;
-}
-
-.profile-actions {
+.profile-socials {
+  align-self: end;
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 0.75rem;
+  margin-bottom: clamp(0.85rem, 2vh, 1.35rem);
   position: relative;
-  z-index: 1;
+  z-index: 2;
+}
+
+.profile-socials .icon-control {
+  background: transparent;
+  border-color: transparent;
+  color: color-mix(in srgb, var(--color-text), transparent 12%);
+}
+
+.profile-socials .icon-control:hover {
+  background: var(--color-accent-soft);
+  border-color: var(--color-border);
 }
 
 .workspace-vignette {
   align-self: end;
   color: var(--color-border-strong);
-  margin: clamp(0.5rem, 2vw, 1.25rem) 0 -0.5rem;
-  max-height: 13rem;
-  opacity: 0.72;
-  width: min(100%, 24rem);
+  height: min(26vh, 13rem);
+  justify-self: stretch;
+  max-width: 35rem;
+  opacity: 0.38;
+  position: relative;
+  width: 100%;
+  z-index: 1;
 }
 
 .workspace-vignette path,
@@ -198,140 +278,233 @@
 }
 
 .workspace-vignette .book-a {
-  fill: var(--color-book-a);
+  fill: color-mix(in srgb, var(--color-book-a), transparent 34%);
 }
 
 .workspace-vignette .book-b {
-  fill: var(--color-book-b);
+  fill: color-mix(in srgb, var(--color-book-b), transparent 42%);
 }
 
 .workspace-vignette .book-c {
-  fill: var(--color-book-c);
+  fill: color-mix(in srgb, var(--color-book-c), transparent 44%);
 }
 
 .workspace-vignette .plant path {
-  fill: color-mix(in srgb, var(--color-accent), transparent 18%);
+  fill: color-mix(in srgb, var(--color-accent), transparent 44%);
 }
 
 .workspace-vignette .plant path:first-child {
-  fill: var(--color-wood);
+  fill: color-mix(in srgb, var(--color-wood), transparent 42%);
 }
 
 .workspace-vignette .computer rect:not(.screen) {
-  fill: var(--color-surface);
+  fill: color-mix(in srgb, var(--color-surface), transparent 35%);
 }
 
 .workspace-vignette .screen {
-  fill: color-mix(in srgb, var(--color-screen), transparent 30%);
+  fill: color-mix(in srgb, var(--color-screen), transparent 72%);
 }
 
 .workspace-vignette .lamp path:nth-child(3) {
-  fill: color-mix(in srgb, var(--color-lamp), transparent 22%);
+  fill: color-mix(in srgb, var(--color-lamp), transparent 62%);
 }
 
 .workspace-vignette .lamp-glow {
-  filter: drop-shadow(0 0 10px color-mix(in srgb, var(--color-lamp), transparent 40%));
-  stroke: var(--color-lamp);
+  filter: drop-shadow(0 0 8px color-mix(in srgb, var(--color-lamp), transparent 58%));
+  stroke: color-mix(in srgb, var(--color-lamp), transparent 25%);
 }
 
 .mobile-nav {
   display: none;
 }
 
+.content-window {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 22px;
+  box-shadow: 0 18px 46px rgb(var(--color-shadow) / 0.12);
+  min-height: 0;
+  overflow-y: auto;
+  position: relative;
+  scroll-behavior: smooth;
+  scrollbar-color: color-mix(in srgb, var(--color-border-strong), var(--color-text) 10%)
+    transparent;
+  scrollbar-width: thin;
+}
+
+.scroll-cue {
+  align-items: center;
+  animation: cue-bob 1.5s ease-in-out infinite;
+  background: color-mix(in srgb, var(--color-surface), transparent 8%);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  box-shadow: 0 10px 24px rgb(var(--color-shadow) / 0.12);
+  color: var(--color-accent-strong);
+  cursor: pointer;
+  display: flex;
+  height: 2.75rem;
+  justify-content: center;
+  margin: 0 auto -2.75rem;
+  opacity: 0.92;
+  padding: 0;
+  position: sticky;
+  top: calc(100% - 4rem);
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease,
+    visibility 180ms ease;
+  width: 2.75rem;
+  z-index: 4;
+}
+
+.scroll-cue:hover {
+  background: var(--color-accent-soft);
+  border-color: var(--color-accent);
+  opacity: 1;
+}
+
+.scroll-cue.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.scroll-cue svg {
+  fill: currentColor;
+  height: 1.2rem;
+  width: 1.2rem;
+}
+
+@keyframes cue-bob {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 0.28rem;
+  }
+}
+
 .content-column {
   display: grid;
-  gap: clamp(3rem, 7vw, 6rem);
+  gap: clamp(2.2rem, 4vw, 3.5rem);
   min-width: 0;
-  padding: var(--space-page);
+  padding: clamp(1.45rem, 2.5vw, 2.15rem);
 }
 
 .section {
   display: grid;
-  gap: 1.5rem;
-  scroll-margin-top: 5rem;
+  gap: 1.1rem;
+  scroll-margin-top: 1.5rem;
 }
 
 .section-heading {
   display: grid;
-  gap: 0.75rem;
+  gap: 0.45rem;
   max-width: 52rem;
+}
+
+.section-heading p {
+  font-size: 0.98rem;
 }
 
 .projects-grid {
   display: grid;
-  gap: clamp(1.25rem, 2.5vw, 2rem);
+  gap: 1rem;
 }
 
 .project-card {
-  background: var(--color-surface);
+  background: color-mix(in srgb, var(--color-surface), var(--color-background) 16%);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-soft);
   display: grid;
-  grid-template-columns: minmax(13rem, 0.85fr) minmax(0, 1fr);
-  min-height: 17rem;
+  grid-template-columns: minmax(18rem, 1.05fr) minmax(16rem, 0.95fr);
+  min-height: 10.75rem;
   overflow: hidden;
 }
 
 .project-preview {
   align-content: center;
   background:
-    linear-gradient(135deg, color-mix(in srgb, var(--color-accent), transparent 72%), transparent),
+    linear-gradient(135deg, color-mix(in srgb, var(--color-accent), transparent 76%), transparent),
     var(--color-surface-strong);
   border-right: 1px solid var(--color-border);
   display: grid;
-  gap: 0.75rem;
-  padding: 1.25rem;
+  gap: 0.6rem;
+  min-height: 10.75rem;
+  padding: 0.9rem;
 }
 
 .project-preview span {
-  background: var(--color-surface);
+  background: color-mix(in srgb, var(--color-surface), white 20%);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
-  box-shadow: 0 8px 18px rgb(var(--color-shadow) / 0.08);
+  box-shadow: 0 7px 14px rgb(var(--color-shadow) / 0.06);
   display: block;
-  min-height: 2.5rem;
+  min-height: 1.55rem;
 }
 
 .project-preview span:first-child {
-  min-height: 5.25rem;
+  min-height: 3.75rem;
+}
+
+.project-preview-2 {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color-book-a), transparent 32%) 0 18%, transparent 18%),
+    color-mix(in srgb, var(--color-surface-strong), var(--color-background) 28%);
 }
 
 .project-preview-2 span {
   border-radius: 999px;
+  margin-left: 22%;
 }
 
 .project-preview-3 {
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: 1fr 1.25fr;
 }
 
 .project-preview-3 span:first-child {
   grid-row: span 2;
-  min-height: 9rem;
+  min-height: 6.5rem;
 }
 
 .project-body {
+  align-content: center;
   display: grid;
-  gap: 1rem;
-  padding: clamp(1.25rem, 3vw, 2rem);
+  gap: 0.68rem;
+  padding: clamp(1rem, 1.8vw, 1.35rem);
+}
+
+.project-body h3 {
+  font-size: clamp(1.12rem, 1.35vw, 1.32rem);
+}
+
+.project-body > p {
+  display: -webkit-box;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .project-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 
 .project-meta span {
   border: 1px solid var(--color-border);
   border-radius: 999px;
-  padding: 0.25rem 0.5rem;
+  padding: 0.18rem 0.48rem;
 }
 
 .tag-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.45rem;
+  gap: 0.38rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -340,16 +513,23 @@
 .tag-list li {
   background: var(--color-accent-soft);
   border: 1px solid var(--color-border);
-  color: var(--color-muted);
-  font-size: 0.9rem;
-  padding: 0.35rem 0.55rem;
+  border-radius: 999px;
+  color: color-mix(in srgb, var(--color-accent-strong), var(--color-text) 22%);
+  font-size: 0.75rem;
+  line-height: 1.2;
+  padding: 0.32rem 0.58rem;
 }
 
 .project-links,
 .contact-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 0.7rem;
+}
+
+.project-links {
+  border-top: 1px solid var(--color-border);
+  padding-top: 0.6rem;
 }
 
 .project-links span {
@@ -365,18 +545,18 @@
 
 .timeline {
   display: grid;
-  gap: 1rem;
+  gap: 0.75rem;
 }
 
 .timeline article,
 .contact-list a,
 .contact-list span {
-  background: var(--color-surface);
+  background: color-mix(in srgb, var(--color-surface), var(--color-background) 12%);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   display: grid;
-  gap: 0.5rem;
-  padding: 1rem;
+  gap: 0.4rem;
+  padding: 0.9rem 1rem;
 }
 
 .timeline-organization {
@@ -406,54 +586,119 @@
 
 .site-footer {
   border-top: 1px solid var(--color-border);
-  padding: 1.5rem 0 0;
+  padding: 1rem 0 0;
+}
+
+@media (min-width: 901px) {
+  body {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 1180px) {
+  .profile-identity {
+    grid-template-columns: minmax(6.75rem, 8.5rem) minmax(0, 1fr);
+  }
+
+  .project-card {
+    grid-template-columns: minmax(15rem, 0.95fr) minmax(17rem, 1fr);
+  }
 }
 
 @media (max-width: 900px) {
+  #root {
+    min-height: 100svh;
+  }
+
   .app-shell {
     display: block;
+    height: auto;
+    overflow: visible;
+    padding: 0;
   }
 
   .profile-panel {
+    background: linear-gradient(180deg, var(--color-surface), var(--color-background-elevated));
     border-bottom: 1px solid var(--color-border);
-    border-right: 0;
+    display: grid;
+    gap: 1rem;
     min-height: auto;
+    overflow: hidden;
+    padding: 1.25rem 1rem 0;
     position: static;
   }
 
-  .workspace-vignette {
-    justify-self: end;
-    margin-top: 0;
-    max-height: 8rem;
-    opacity: 0.46;
-    width: min(20rem, 86vw);
+  .utility-controls {
+    margin: 0;
+    max-width: none;
   }
 
-  .profile-panel > .site-nav {
+  .profile-identity {
+    grid-template-columns: minmax(5.5rem, 7rem) minmax(0, 1fr);
+    margin: 0;
+  }
+
+  .profile-copy {
+    margin: 0;
+  }
+
+  .profile-panel > .site-nav,
+  .profile-socials {
     display: none;
   }
 
+  .workspace-vignette {
+    height: 7rem;
+    justify-self: end;
+    opacity: 0.32;
+    width: min(20rem, 86vw);
+  }
+
   .mobile-nav {
-    background: var(--color-background);
+    background: color-mix(in srgb, var(--color-background), var(--color-surface) 48%);
     border-bottom: 1px solid var(--color-border);
     display: block;
-    padding: 0.75rem 1rem;
+    padding: 0.55rem 1rem;
     position: sticky;
     top: 0;
     z-index: 5;
   }
 
   .mobile-nav .site-nav {
-    flex-wrap: nowrap;
-    overflow-x: auto;
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-items: stretch;
+    overflow: hidden;
   }
 
   .mobile-nav .site-nav a {
-    flex: 1 0 auto;
+    align-items: center;
+    font-size: 0.95rem;
+    justify-content: center;
+    min-height: 2.45rem;
+    padding: 0.35rem 0.25rem 0.35rem 0.55rem;
+  }
+
+  .content-window {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+  }
+
+  .scroll-cue {
+    display: none;
   }
 
   .content-column {
+    gap: 2.75rem;
     padding: 2rem 1rem;
+  }
+
+  .section {
+    scroll-margin-top: 4.75rem;
   }
 
   .project-card {
@@ -464,5 +709,37 @@
     aspect-ratio: 16 / 9;
     border-bottom: 1px solid var(--color-border);
     border-right: 0;
+  }
+
+  .project-body > p {
+    display: block;
+    overflow: visible;
+    -webkit-line-clamp: unset;
+  }
+}
+
+@media (max-width: 520px) {
+  .profile-identity {
+    align-items: start;
+    grid-template-columns: 5.6rem minmax(0, 1fr);
+  }
+
+  .utility-controls {
+    gap: 0.45rem;
+  }
+
+  .icon-control {
+    height: 2.55rem;
+    min-width: 2.55rem;
+  }
+
+  .project-body {
+    padding: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-cue {
+    animation: none;
   }
 }

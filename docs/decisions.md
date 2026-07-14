@@ -68,6 +68,24 @@ Deployment uses GitHub Pages with GitHub Actions, matching the current Vite stat
 
 The repository remains a project Pages site at `/portfolio/`; `vite.config.ts` keeps production builds on `base: '/portfolio/'` while local development stays at `/`.
 
+## Reference-layout redesign
+
+The approved `docs/design-reference.png` is used as a layout reference, not as an embedded image asset. The redesign recreates its structure with React, semantic HTML, custom CSS, and the existing workspace SVG vignette.
+
+Desktop now uses a full-viewport `100dvh` application shell with padded edges, a fixed left profile area, and a separate warm inset content window on the right. Above the mobile breakpoint, document-level scrolling is disabled and only the right content window scrolls. This matches the reference and the original product requirement for an independently scrollable main content area.
+
+Mobile and tablet widths keep normal document scrolling. The inset window styling and independent overflow are removed, the layout stacks vertically, and the navigation becomes a compact sticky grid to avoid horizontal scrolling.
+
+Active-section detection uses the content window as the `IntersectionObserver` root on desktop and returns to the viewport root on mobile. Desktop anchor navigation is intercepted so Projects, Experience, and Contact scroll inside the content window instead of the document.
+
+The left profile panel follows the reference hierarchy: utility controls, identity row, intro, minimal vertical navigation, social icons, and the decorative workspace vignette. The previously rendered statistic boxes were removed from the visible profile layout because they are not part of the approved hierarchy, but the localized data remains in the content model for possible future use.
+
+Language controls are separate Brazil and US flag icon buttons with accessible names and visible tooltips. Theme and résumé controls are icon-only buttons/links using inline SVG icons to avoid adding a dependency. The résumé link remains base-path-safe and switches between the Portuguese and English PDFs according to the active language.
+
+Project descriptions are line-clamped on desktop to keep cards close to the reference proportions and allow more work to be visible in the inset window. Mobile shows the full description text.
+
+A small circular scroll cue appears inside the desktop content window while there is more content below. It jumps to Contact and fades out near the end of the internal scroll container. It is hidden on mobile because mobile uses normal document scrolling rather than an independent content window.
+
 ## Phase 0 scaffold details
 
 The Vite template resolved to React 19, TypeScript 6, Vite 8, and `oxlint`. These are accepted as scaffold defaults for Phase 0. Any future dependency additions require an explicit reason and should be recorded here or in `PROJECT_STATUS.md`.

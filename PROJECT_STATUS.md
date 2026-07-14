@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Phase 6 complete - GitHub Pages deployment.
+Reference-layout redesign complete locally - pending Pedro review.
 
 ## Last completed work
 
@@ -44,6 +44,20 @@ Phase 6 complete - GitHub Pages deployment.
 - Verified the first Pages deployment run completed successfully.
 - Verified the live page, profile image, and English résumé asset returned HTTP 200.
 - Updated canonical and Open Graph URLs to the lowercase live GitHub Pages URL.
+- Redesigned the layout against `docs/design-reference.png` without embedding the reference image.
+- Desktop now uses a full `100dvh` application shell with viewport padding, a fixed left profile area, and an inset right content window.
+- Desktop document-level scrolling is disabled; the right content window owns vertical scrolling.
+- Retargeted active-section detection to the content window on desktop while preserving viewport observation on mobile.
+- Retargeted desktop anchor navigation to scroll the internal content window.
+- Reorganized the profile panel into utility icon controls, identity row, concise intro, vertical navigation, social icons, and subdued workspace vignette.
+- Replaced text language/theme/résumé controls with icon controls: Brazil and US flags, theme icon, and résumé download icon.
+- Kept résumé download locale-aware through the selected language.
+- Restyled project cards to be lower, more visual, and closer to the reference hierarchy.
+- Restored mobile and tablet behavior to normal document scrolling with a compact sticky navigation and no horizontal nav scrollbar.
+- Preserved existing bilingual content files, theme system, GitHub Pages base path, résumé/profile assets, and decorative SVG illustration.
+- Removed `Intern` / `Estagiario` from the visible profile role copy while leaving the experience entries intact.
+- Aligned the profile utility controls to the right on desktop and mobile.
+- Added a circular bobbing scroll cue inside the desktop content window; it scrolls to Contact when clicked and fades out near the end of the internal scroll area.
 
 ## In progress
 
@@ -51,11 +65,12 @@ Phase 6 complete - GitHub Pages deployment.
 
 ## Next recommended action
 
-Review the live site at `https://pedro-nll.github.io/portfolio/` and decide whether to replace the two remaining concept cards before any final polish pass.
+Review the local reference-layout redesign and decide whether the remaining visual differences are acceptable before authorizing any commit, push, or deployment.
 
 ## Blockers and questions for Pedro
 
 - Two concept project cards intentionally remain until Pedro supplies additional real project details.
+- Project-card previews remain CSS/SVG-style concept previews rather than real project screenshots.
 
 ## Validation performed
 
@@ -98,17 +113,47 @@ Review the live site at `https://pedro-nll.github.io/portfolio/` and decide whet
 - `npm run dev -- --host 127.0.0.1` started successfully at `http://127.0.0.1:5173/` after local port binding was approved.
 - `gh repo create portfolio --public --source=. --remote=origin --push` succeeded.
 - `git status --short --branch` shows `main...origin/main`.
+- `npm run dev -- --host 127.0.0.1` started successfully at `http://127.0.0.1:5173/` for the reference redesign.
+- Baseline screenshots before editing were captured at 1440x900 and 1366x768.
+- Final redesign screenshots were captured at 1366x768, 1440x900, 1920x1080, 900x900, and 390x844.
+- At 1366x768, the desktop document itself did not show a viewport scrollbar; the visible scrollbar belongs to the inset content window.
+- At 1440x900, the first two project cards and a sliver of the next card are visible in the content window.
+- At 900px and 390px widths, the layout returned to natural document scrolling with stacked profile/content and sticky mobile navigation.
+- Keyboard focus visibility is preserved through the global `:focus-visible` styling on links and buttons, including icon-only controls.
+- Icon-only controls have accessible names and visible hover/focus tooltips.
+- The selected language is indicated with `aria-pressed` and a visible marker, not color alone.
+- Both language controls were implemented as explicit Português and English buttons; the résumé href is still computed from the selected language.
+- Both themes continue to use the existing `data-theme` theme system.
+- Reduced-motion behavior continues through the existing global `prefers-reduced-motion` rule, including scroll behavior.
+- `npm run lint` passed after the redesign.
+- `npm run type-check` passed after the redesign.
+- `npm run build` passed after the redesign. Production output keeps `/portfolio/` asset URLs in `dist/index.html`.
+- `dist/` contains `resume/resume-pt.pdf`, `resume/resume-en.pdf`, and `profile/pedro-lambert.jpg`.
+- `npm run lint` passed after the follow-up profile/control/scroll-cue changes.
+- `npm run type-check` passed after the follow-up profile/control/scroll-cue changes.
+- `npm run build` passed after the follow-up profile/control/scroll-cue changes.
+- Follow-up screenshots were captured at 1440x900 and 390x844 to verify the right-aligned controls and mobile layout.
+- Dev server is running at `http://127.0.0.1:5173/` for Pedro review.
 
 ## Known issues
 
 - Two concept project cards still remain.
 - Experience selection is confirmed for now: Infoblox, dti digital, and Agencia Experimental de Software / Grade Inteligente.
 - Lighthouse was not run in Phase 4 because it is not installed in the project and no new dependency was added.
+- Remaining visual differences from the reference: project previews are existing generated CSS/SVG-style placeholders rather than detailed raster screenshots; profile statistics are no longer rendered in the left panel to match the approved hierarchy, but remain in localized content; desktop project descriptions are line-clamped to keep card proportions close to the reference.
+- No known responsive issue was observed in the checked 1366x768, 1440x900, 1920x1080, 900x900, or 390x844 screenshots.
+- Vite preview serves the built HTML at `/portfolio/`; built public assets are present in `dist/` and map correctly under GitHub Pages at `/portfolio/`.
 
 ## Files changed in the latest session
 
 - `PROJECT_STATUS.md`
-- `.github/workflows/deploy.yml`
-- `docs/content-needed.md`
 - `docs/decisions.md`
-- `index.html`
+- `src/App.css`
+- `src/components/AppShell.tsx`
+- `src/content/en.ts`
+- `src/content/pt.ts`
+- `src/App.tsx`
+- `src/components/Navigation.tsx`
+- `src/components/ProfilePanel.tsx`
+- `src/hooks/useActiveSection.ts`
+- `src/index.css`

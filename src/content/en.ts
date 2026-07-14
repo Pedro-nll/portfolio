@@ -10,7 +10,7 @@ export const enContent: PortfolioContent = {
   },
   profile: {
     name: 'Pedro Lambert',
-    role: 'Software Engineering Intern at Infoblox',
+    role: 'Software Engineering at Infoblox',
     intro:
       'Full-stack professional with experience in .NET, React, Java, TypeScript, Spring Boot, and Python.',
     status: 'Software Engineering student at PUC Minas',
