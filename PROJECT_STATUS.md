@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Reference-layout redesign complete locally - pending Pedro review.
+Reference-layout redesign deployed.
 
 ## Last completed work
 
@@ -58,6 +58,10 @@ Reference-layout redesign complete locally - pending Pedro review.
 - Removed `Intern` / `Estagiario` from the visible profile role copy while leaving the experience entries intact.
 - Aligned the profile utility controls to the right on desktop and mobile.
 - Added a circular bobbing scroll cue inside the desktop content window; it scrolls to Contact when clicked and fades out near the end of the internal scroll area.
+- Committed the redesign as `50f773e feat: redesign portfolio layout`.
+- Pushed `main` to `origin`.
+- GitHub Pages deployment run `29351862811` completed successfully for commit `50f773e0dc322751a5bde502eafb6fc0f8a1e337`.
+- Verified the live site and key assets at `https://pedro-nll.github.io/portfolio/`.
 
 ## In progress
 
@@ -65,7 +69,7 @@ Reference-layout redesign complete locally - pending Pedro review.
 
 ## Next recommended action
 
-Review the local reference-layout redesign and decide whether the remaining visual differences are acceptable before authorizing any commit, push, or deployment.
+Review the deployed redesign at `https://pedro-nll.github.io/portfolio/` and decide whether to replace the remaining concept project cards or tune the project preview artwork.
 
 ## Blockers and questions for Pedro
 
@@ -133,7 +137,13 @@ Review the local reference-layout redesign and decide whether the remaining visu
 - `npm run type-check` passed after the follow-up profile/control/scroll-cue changes.
 - `npm run build` passed after the follow-up profile/control/scroll-cue changes.
 - Follow-up screenshots were captured at 1440x900 and 390x844 to verify the right-aligned controls and mobile layout.
-- Dev server is running at `http://127.0.0.1:5173/` for Pedro review.
+- Dev server was used for local review before deployment.
+- `git push origin main` succeeded for commit `50f773e`.
+- `gh run view 29351862811 --repo Pedro-nll/portfolio --json conclusion,status,url,headSha` returned `status: completed` and `conclusion: success`.
+- `curl -I https://pedro-nll.github.io/portfolio/` returned HTTP 200 after deployment.
+- `curl -I https://pedro-nll.github.io/portfolio/profile/pedro-lambert.jpg` returned HTTP 200 after deployment.
+- `curl -I https://pedro-nll.github.io/portfolio/resume/resume-en.pdf` returned HTTP 200 after deployment.
+- `curl -I https://pedro-nll.github.io/portfolio/resume/resume-pt.pdf` returned HTTP 200 after deployment.
 
 ## Known issues
 
