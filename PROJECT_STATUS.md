@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Focused visual/content refinement approved for push.
+Focused visual/content refinement deployed.
 
 ## Last completed work
 
@@ -70,6 +70,10 @@ Focused visual/content refinement approved for push.
 - Updated the profile role to `Software Engineer at Infoblox` and `Engenheiro de software na Infoblox`.
 - Updated the Infoblox experience descriptions to mention scalable microservices, distributed architecture, and Infoblox as a Silicon Valley company.
 - Fixed internal scroll behavior so changing languages does not re-apply hash navigation or move the scrollable content window.
+- Committed the focused refinement as `008ed8a feat: refine profile contact details`.
+- Pushed `main` to `origin`.
+- GitHub Pages deployment run `29388993191` completed successfully for commit `008ed8a334555453cb6421b6e81538fdf54f8466`.
+- Verified the deployed portfolio URL returned HTTP 200 after the refinement deployment.
 
 ## In progress
 
@@ -77,7 +81,7 @@ Focused visual/content refinement approved for push.
 
 ## Next recommended action
 
-Push the approved focused refinement and verify the GitHub Pages deployment.
+Review the deployed focused refinement at `https://pedro-nll.github.io/portfolio/`.
 
 ## Blockers and questions for Pedro
 
@@ -165,6 +169,9 @@ Push the approved focused refinement and verify the GitHub Pages deployment.
 - `npm run type-check` passed after the language-scroll fix.
 - `npm run lint` passed after the language-scroll fix.
 - `npm run build` passed after the language-scroll fix.
+- `git push origin main` succeeded for commit `008ed8a`.
+- `gh run view 29388993191 --repo Pedro-nll/portfolio --json conclusion,status,url,headSha` returned `status: completed` and `conclusion: success`.
+- `curl -I https://pedro-nll.github.io/portfolio/` returned HTTP 200 after the refinement deployment.
 
 ## Known issues
 
@@ -174,7 +181,7 @@ Push the approved focused refinement and verify the GitHub Pages deployment.
 - Remaining visual differences from the reference: project previews are existing generated CSS/SVG-style placeholders rather than detailed raster screenshots; profile statistics are no longer rendered in the left panel to match the approved hierarchy, but remain in localized content; desktop project descriptions are line-clamped to keep card proportions close to the reference.
 - No known responsive issue was observed in the checked 1366x768, 1440x900, 1920x1080, 900x900, or 390x844 screenshots.
 - Vite preview serves the built HTML at `/portfolio/`; built public assets are present in `dist/` and map correctly under GitHub Pages at `/portfolio/`.
-- Focused refinement, content tweak, and language-scroll fix were approved by Pedro for commit and push.
+- Focused refinement, content tweak, and language-scroll fix are deployed.
 
 ## Files changed in the latest session
 
