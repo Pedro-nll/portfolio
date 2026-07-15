@@ -10,10 +10,12 @@ export const enContent: PortfolioContent = {
   },
   profile: {
     name: 'Pedro Lambert',
-    role: 'Software Engineering at Infoblox',
+    role: 'Software Engineer at Infoblox',
+    email: 'pedronll@outlook.com',
+    emailLabel: 'Email Pedro Lambert',
     intro:
       'Full-stack professional with experience in .NET, React, Java, TypeScript, Spring Boot, and Python.',
-    status: 'Software Engineering student at PUC Minas',
+    status: '',
     photoSrc: 'profile/pedro-lambert.jpg',
     photoAlt: 'Professional photo of Pedro Lambert',
     stats: [
@@ -100,7 +102,7 @@ export const enContent: PortfolioContent = {
           organization: 'Infoblox',
           period: 'April 2026 - Present',
           description:
-            'Current software engineering internship, listed in the resume supplied by Pedro.',
+            'Professional experience developing scalable microservices in a distributed architecture at Infoblox, a Silicon Valley company.',
         },
         {
           id: 'dti-digital',

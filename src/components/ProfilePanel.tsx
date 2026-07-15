@@ -28,6 +28,9 @@ export function ProfilePanel({
   const profilePhotoSrc = `${import.meta.env.BASE_URL}${profile.photoSrc}`
   const nextThemeLabel = theme === 'dark' ? actions.theme.light : actions.theme.dark
   const resumeLabel = `${actions.resume} - ${actions.resumePending}`
+  const professionalLinks = content.sections.contact.links.filter(
+    (link) => link.href && !link.href.startsWith('mailto:'),
+  )
 
   return (
     <aside className="profile-panel" aria-label={content.aria.profile}>
@@ -76,9 +79,27 @@ export function ProfilePanel({
           alt={profile.photoAlt}
         />
         <div className="profile-title">
-          <p className="eyebrow">{profile.status}</p>
+          {profile.status ? <p className="eyebrow">{profile.status}</p> : null}
           <h1>{profile.name}</h1>
           <p className="role">{profile.role}</p>
+          <a className="profile-email" href={`mailto:${profile.email}`} aria-label={profile.emailLabel}>
+            {profile.email}
+          </a>
+          <div className="profile-socials" aria-label={content.sections.contact.eyebrow}>
+            {professionalLinks.map((link) => (
+              <IconButton
+                key={link.label}
+                as="a"
+                href={link.href}
+                target={link.external ? '_blank' : undefined}
+                rel={link.external ? 'noreferrer' : undefined}
+                label={link.label}
+                title={link.label}
+              >
+                <Icon name={getSocialIcon(link.label)} />
+              </IconButton>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -92,24 +113,6 @@ export function ProfilePanel({
         label={content.aria.navigation}
         onNavigate={onSectionNavigate}
       />
-
-      <div className="profile-socials" aria-label={content.sections.contact.eyebrow}>
-        {content.sections.contact.links.map((link) =>
-          link.href ? (
-            <IconButton
-              key={link.label}
-              as="a"
-              href={link.href}
-              target={link.external ? '_blank' : undefined}
-              rel={link.external ? 'noreferrer' : undefined}
-              label={link.label}
-              title={link.label}
-            >
-              <Icon name={getSocialIcon(link.label)} />
-            </IconButton>
-          ) : null,
-        )}
-      </div>
 
       <WorkspaceVignette />
     </aside>

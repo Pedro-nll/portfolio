@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Reference-layout redesign deployed.
+Focused visual/content refinement approved for push.
 
 ## Last completed work
 
@@ -62,6 +62,14 @@ Reference-layout redesign deployed.
 - Pushed `main` to `origin`.
 - GitHub Pages deployment run `29351862811` completed successfully for commit `50f773e0dc322751a5bde502eafb6fc0f8a1e337`.
 - Verified the live site and key assets at `https://pedro-nll.github.io/portfolio/`.
+- Local-only visual refinement added the visible profile email as a `mailto:` link under the role.
+- GitHub and LinkedIn icons now sit with the email in the identity/contact group; the redundant profile email icon was removed.
+- Light-mode workspace vignette visibility was improved with illustration-specific semantic tokens and modest detail strengthening.
+- The workspace vignette is hidden at the mobile/tablet breakpoint.
+- Local-only content tweak removed the profile student status line in both languages.
+- Updated the profile role to `Software Engineer at Infoblox` and `Engenheiro de software na Infoblox`.
+- Updated the Infoblox experience descriptions to mention scalable microservices, distributed architecture, and Infoblox as a Silicon Valley company.
+- Fixed internal scroll behavior so changing languages does not re-apply hash navigation or move the scrollable content window.
 
 ## In progress
 
@@ -69,7 +77,7 @@ Reference-layout redesign deployed.
 
 ## Next recommended action
 
-Review the deployed redesign at `https://pedro-nll.github.io/portfolio/` and decide whether to replace the remaining concept project cards or tune the project preview artwork.
+Push the approved focused refinement and verify the GitHub Pages deployment.
 
 ## Blockers and questions for Pedro
 
@@ -144,6 +152,19 @@ Review the deployed redesign at `https://pedro-nll.github.io/portfolio/` and dec
 - `curl -I https://pedro-nll.github.io/portfolio/profile/pedro-lambert.jpg` returned HTTP 200 after deployment.
 - `curl -I https://pedro-nll.github.io/portfolio/resume/resume-en.pdf` returned HTTP 200 after deployment.
 - `curl -I https://pedro-nll.github.io/portfolio/resume/resume-pt.pdf` returned HTTP 200 after deployment.
+- Local dev server started successfully at `http://127.0.0.1:5173/` for the focused refinement pass.
+- Deployed comparison screenshot captured from `https://pedro-nll.github.io/portfolio/#experience`.
+- Local before/after screenshots captured at 1440x900; mobile/tablet screenshots captured at 390x844 and 900x900.
+- `npm run type-check` passed after the focused refinement.
+- `npm run lint` passed after the focused refinement.
+- `npm run build` passed after the focused refinement.
+- `npm run type-check` passed after the local content tweak.
+- `npm run lint` passed after the local content tweak.
+- `npm run build` passed after the local content tweak.
+- Desktop screenshot captured at 1440x900 after removing the profile status line.
+- `npm run type-check` passed after the language-scroll fix.
+- `npm run lint` passed after the language-scroll fix.
+- `npm run build` passed after the language-scroll fix.
 
 ## Known issues
 
@@ -153,17 +174,15 @@ Review the deployed redesign at `https://pedro-nll.github.io/portfolio/` and dec
 - Remaining visual differences from the reference: project previews are existing generated CSS/SVG-style placeholders rather than detailed raster screenshots; profile statistics are no longer rendered in the left panel to match the approved hierarchy, but remain in localized content; desktop project descriptions are line-clamped to keep card proportions close to the reference.
 - No known responsive issue was observed in the checked 1366x768, 1440x900, 1920x1080, 900x900, or 390x844 screenshots.
 - Vite preview serves the built HTML at `/portfolio/`; built public assets are present in `dist/` and map correctly under GitHub Pages at `/portfolio/`.
+- Focused refinement, content tweak, and language-scroll fix were approved by Pedro for commit and push.
 
 ## Files changed in the latest session
 
 - `PROJECT_STATUS.md`
 - `docs/decisions.md`
 - `src/App.css`
-- `src/components/AppShell.tsx`
+- `src/components/ProfilePanel.tsx`
 - `src/content/en.ts`
 - `src/content/pt.ts`
-- `src/App.tsx`
-- `src/components/Navigation.tsx`
-- `src/components/ProfilePanel.tsx`
-- `src/hooks/useActiveSection.ts`
-- `src/index.css`
+- `src/content/types.ts`
+- `src/styles/tokens.css`

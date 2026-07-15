@@ -40,6 +40,8 @@ export type PortfolioContent = {
   profile: {
     name: string
     role: string
+    email: string
+    emailLabel: string
     intro: string
     status: string
     photoSrc: string

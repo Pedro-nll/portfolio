@@ -20,6 +20,9 @@
   --color-book-a: #355f4d;
   --color-book-b: #8c6c4f;
   --color-book-c: #b78b55;
+  --color-vignette-line: #b8a58d;
+  --color-vignette-surface: #f7f0e6;
+  --color-vignette-opacity: 0.58;
   --space-page: clamp(1.25rem, 4vw, 4rem);
   --radius-sm: 4px;
   --radius-md: 8px;
@@ -52,6 +55,9 @@
   --color-book-a: #7fb397;
   --color-book-b: #9f886e;
   --color-book-c: #d7a45e;
+  --color-vignette-line: #6a7163;
+  --color-vignette-surface: #252c24;
+  --color-vignette-opacity: 0.5;
   --shadow-soft: 0 18px 45px rgb(var(--color-shadow) / 0.24);
 }
 
@@ -82,6 +88,9 @@
     --color-book-a: #7fb397;
     --color-book-b: #9f886e;
     --color-book-c: #d7a45e;
+    --color-vignette-line: #6a7163;
+    --color-vignette-surface: #252c24;
+    --color-vignette-opacity: 0.5;
     --shadow-soft: 0 18px 45px rgb(var(--color-shadow) / 0.24);
   }
 }

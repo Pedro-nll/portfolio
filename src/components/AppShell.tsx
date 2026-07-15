@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState, type RefObject } from 'react'
+import { useCallback, useEffect, useRef, useState, type RefObject } from 'react'
 import type { PortfolioContent } from '../content/types'
 import type { LanguageCode } from '../hooks/useLanguage'
 import type { ThemePreference } from '../hooks/useTheme'
@@ -27,6 +27,7 @@ export function AppShell({
 }: AppShellProps) {
   const year = new Date().getFullYear()
   const [isContentAtEnd, setIsContentAtEnd] = useState(false)
+  const hasAppliedInitialHash = useRef(false)
   const contactLabel = content.nav.find((item) => item.id === 'contact')?.label ?? 'Contact'
   const scrollCueLabel =
     content.language === 'en' ? `Go to ${contactLabel}` : `Ir para ${contactLabel.toLowerCase()}`
@@ -51,6 +52,11 @@ export function AppShell({
   }, [contentWindowRef])
 
   useEffect(() => {
+    if (hasAppliedInitialHash.current) {
+      return
+    }
+
+    hasAppliedInitialHash.current = true
     const id = window.location.hash.replace('#', '') as PortfolioContent['nav'][number]['id']
     if (content.nav.some((item) => item.id === id)) {
       window.requestAnimationFrame(() => handleSectionNavigate(id, false))

@@ -10,10 +10,12 @@ export const ptContent: PortfolioContent = {
   },
   profile: {
     name: 'Pedro Lambert',
-    role: 'Engenharia de software na Infoblox',
+    role: 'Engenheiro de software na Infoblox',
+    email: 'pedronll@outlook.com',
+    emailLabel: 'Enviar email para Pedro Lambert',
     intro:
       'Profissional fullstack com experiencia em .NET, React, Java, TypeScript, Spring Boot e Python.',
-    status: 'Estudante de Engenharia de Software na PUC Minas',
+    status: '',
     photoSrc: 'profile/pedro-lambert.jpg',
     photoAlt: 'Foto profissional de Pedro Lambert',
     stats: [
@@ -100,7 +102,7 @@ export const ptContent: PortfolioContent = {
           organization: 'Infoblox',
           period: 'abril de 2026 - atual',
           description:
-            'Estagio atual em engenharia de software, listado no curriculo fornecido por Pedro.',
+            'Experiencia profissional no desenvolvimento de microsservicos escalaveis em uma arquitetura distribuida na Infoblox, empresa do Vale do Silicio.',
         },
         {
           id: 'dti-digital',
