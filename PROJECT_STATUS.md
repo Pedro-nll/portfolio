@@ -77,6 +77,10 @@ Focused visual/content refinement deployed.
 - Local-only text cleanup removed the Projects eyebrow, Projects intro, and Experience eyebrow in both languages.
 - Local-only change removed the right-side Contact section because the same contact options are now available in the left profile identity group.
 - Contact was removed from the anchor navigation; the scroll cue now targets Experience.
+- Committed the section cleanup as `3b1bce9 feat: streamline portfolio sections`.
+- Pushed `main` to `origin`.
+- GitHub Pages deployment run `29390078651` completed successfully for commit `3b1bce935b7dcb8458d5f9d965d9c96a21f56b86`.
+- Verified the deployed portfolio URL returned HTTP 200 after the section cleanup deployment.
 
 ## In progress
 
@@ -180,6 +184,9 @@ Review the deployed focused refinement at `https://pedro-nll.github.io/portfolio
 - `npm run type-check` passed after removing the right-side Contact section.
 - `npm run lint` passed after removing the right-side Contact section.
 - `npm run build` passed after removing the right-side Contact section.
+- `git push origin main` succeeded for commit `3b1bce9`.
+- `gh run view 29390078651 --repo Pedro-nll/portfolio --json conclusion,status,url,headSha` returned `status: completed` and `conclusion: success`.
+- `curl -I https://pedro-nll.github.io/portfolio/` returned HTTP 200 after the section cleanup deployment.
 
 ## Known issues
 
@@ -190,8 +197,7 @@ Review the deployed focused refinement at `https://pedro-nll.github.io/portfolio
 - No known responsive issue was observed in the checked 1366x768, 1440x900, 1920x1080, 900x900, or 390x844 screenshots.
 - Vite preview serves the built HTML at `/portfolio/`; built public assets are present in `dist/` and map correctly under GitHub Pages at `/portfolio/`.
 - Focused refinement, content tweak, and language-scroll fix are deployed.
-- Latest section text cleanup remains local and uncommitted.
-- Right-side Contact removal remains local and uncommitted.
+- Section text cleanup and right-side Contact removal are deployed.
 
 ## Files changed in the latest session
 
