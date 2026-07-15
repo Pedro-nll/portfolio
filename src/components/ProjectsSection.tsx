@@ -8,10 +8,10 @@ type ProjectsSectionProps = {
 export function ProjectsSection({ content }: ProjectsSectionProps) {
   return (
     <section className="section projects-section" id="projects" aria-labelledby="projects-title">
-      <p className="eyebrow">{content.eyebrow}</p>
+      {content.eyebrow ? <p className="eyebrow">{content.eyebrow}</p> : null}
       <div className="section-heading">
         <h2 id="projects-title">{content.title}</h2>
-        <p>{content.intro}</p>
+        {content.intro ? <p>{content.intro}</p> : null}
       </div>
 
       <div className="projects-grid">

@@ -7,7 +7,7 @@ type ExperienceTimelineProps = {
 export function ExperienceTimeline({ content }: ExperienceTimelineProps) {
   return (
     <section className="section" id="experience" aria-labelledby="experience-title">
-      <p className="eyebrow">{content.eyebrow}</p>
+      {content.eyebrow ? <p className="eyebrow">{content.eyebrow}</p> : null}
       <div className="section-heading">
         <h2 id="experience-title">{content.title}</h2>
         <p>{content.intro}</p>

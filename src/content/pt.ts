@@ -26,7 +26,6 @@ export const ptContent: PortfolioContent = {
   nav: [
     { id: 'projects', label: 'Projetos' },
     { id: 'experience', label: 'Experiencia' },
-    { id: 'contact', label: 'Contato' },
   ],
   actions: {
     resume: 'Curriculo',
@@ -41,10 +40,9 @@ export const ptContent: PortfolioContent = {
   },
   sections: {
     projects: {
-      eyebrow: 'Trabalho selecionado',
+      eyebrow: '',
       title: 'Projetos',
-      intro:
-        'Projeto real e amostras conceituais mostram foco em desenvolvimento full-stack, automacao e interfaces praticas.',
+      intro: '',
       linkLabels: {
         demo: 'Demo',
         demoPending: 'Demo pendente',
@@ -91,7 +89,7 @@ export const ptContent: PortfolioContent = {
       ],
     },
     experience: {
-      eyebrow: 'Trajetoria',
+      eyebrow: '',
       title: 'Experiencia',
       intro:
         'Entradas selecionadas com foco em desenvolvimento de software aplicado e experiencia proxima a projetos reais.',

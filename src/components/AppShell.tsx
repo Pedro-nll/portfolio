@@ -2,7 +2,6 @@ import { useCallback, useEffect, useRef, useState, type RefObject } from 'react'
 import type { PortfolioContent } from '../content/types'
 import type { LanguageCode } from '../hooks/useLanguage'
 import type { ThemePreference } from '../hooks/useTheme'
-import { ContactLinks } from './ContactLinks'
 import { ExperienceTimeline } from './ExperienceTimeline'
 import { Navigation } from './Navigation'
 import { ProfilePanel } from './ProfilePanel'
@@ -28,9 +27,11 @@ export function AppShell({
   const year = new Date().getFullYear()
   const [isContentAtEnd, setIsContentAtEnd] = useState(false)
   const hasAppliedInitialHash = useRef(false)
-  const contactLabel = content.nav.find((item) => item.id === 'contact')?.label ?? 'Contact'
+  const experienceLabel = content.nav.find((item) => item.id === 'experience')?.label ?? 'Experience'
   const scrollCueLabel =
-    content.language === 'en' ? `Go to ${contactLabel}` : `Ir para ${contactLabel.toLowerCase()}`
+    content.language === 'en'
+      ? `Go to ${experienceLabel}`
+      : `Ir para ${experienceLabel.toLowerCase()}`
 
   const handleSectionNavigate = useCallback((id: PortfolioContent['nav'][number]['id'], smooth = true) => {
     if (!window.matchMedia('(min-width: 901px)').matches) {
@@ -117,7 +118,7 @@ export function AppShell({
             aria-label={scrollCueLabel}
             aria-hidden={isContentAtEnd}
             tabIndex={isContentAtEnd ? -1 : 0}
-            onClick={() => handleSectionNavigate('contact')}
+            onClick={() => handleSectionNavigate('experience')}
           >
             <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
               <path d="M11 4h2v11.2l4.2-4.2 1.4 1.4L12 19 5.4 12.4 6.8 11l4.2 4.2V4Z" />
@@ -126,7 +127,6 @@ export function AppShell({
           <div className="content-column">
             <ProjectsSection content={content.sections.projects} />
             <ExperienceTimeline content={content.sections.experience} />
-            <ContactLinks content={content.sections.contact} />
 
             <footer className="site-footer">
               <p>

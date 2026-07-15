@@ -26,7 +26,6 @@ export const enContent: PortfolioContent = {
   nav: [
     { id: 'projects', label: 'Projects' },
     { id: 'experience', label: 'Experience' },
-    { id: 'contact', label: 'Contact' },
   ],
   actions: {
     resume: 'Resume',
@@ -41,10 +40,9 @@ export const enContent: PortfolioContent = {
   },
   sections: {
     projects: {
-      eyebrow: 'Selected work',
+      eyebrow: '',
       title: 'Projects',
-      intro:
-        'A real project and concept samples show focus across full-stack development, automation, and practical interfaces.',
+      intro: '',
       linkLabels: {
         demo: 'Demo',
         demoPending: 'Demo pending',
@@ -91,7 +89,7 @@ export const enContent: PortfolioContent = {
       ],
     },
     experience: {
-      eyebrow: 'Background',
+      eyebrow: '',
       title: 'Experience',
       intro:
         'Selected entries focused on applied software development and experience close to real project delivery.',
