@@ -1,4 +1,4 @@
-export type SectionId = 'projects' | 'experience'
+export type SectionId = 'projects' | 'experience' | 'academic'
 
 export type Project = {
   id: string
@@ -20,6 +20,13 @@ export type ExperienceEntry = {
   organization: string
   period: string
   description: string
+}
+
+export type TimelineSection = {
+  eyebrow: string
+  title: string
+  intro: string
+  items: ExperienceEntry[]
 }
 
 export type SocialLink = {
@@ -54,6 +61,7 @@ export type PortfolioContent = {
   nav: Array<{
     id: SectionId
     label: string
+    shortLabel?: string
   }>
   actions: {
     resume: string
@@ -80,12 +88,8 @@ export type PortfolioContent = {
       technologiesLabel: string
       items: Project[]
     }
-    experience: {
-      eyebrow: string
-      title: string
-      intro: string
-      items: ExperienceEntry[]
-    }
+    experience: TimelineSection
+    academic: TimelineSection
     contact: {
       eyebrow: string
       title: string

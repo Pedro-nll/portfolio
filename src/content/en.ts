@@ -26,6 +26,7 @@ export const enContent: PortfolioContent = {
   nav: [
     { id: 'projects', label: 'Projects' },
     { id: 'experience', label: 'Experience' },
+    { id: 'academic', label: 'Academic Experience', shortLabel: 'Academic' },
   ],
   actions: {
     resume: 'Resume',
@@ -117,6 +118,38 @@ export const enContent: PortfolioContent = {
           period: 'August 2023 - December 2024',
           description:
             'Helped with early projects and agency structure, including Grade Inteligente for the academic community.',
+        },
+      ],
+    },
+    academic: {
+      eyebrow: '',
+      title: 'Academic Experience',
+      intro:
+        'Research, recognition, and academic programs connected to software engineering practice.',
+      items: [
+        {
+          id: 'sbes-paper',
+          title: 'Published paper at SBES 2024',
+          organization: 'Brazilian Symposium on Software Engineering',
+          period: '2024',
+          description:
+            'Published "On the Identification of Self-Admitted Technical Debt with Large Language Models" from undergraduate research at PUC Minas on self-admitted technical debt.',
+        },
+        {
+          id: 'academic-excellence',
+          title: 'Academic Excellence Award',
+          organization: 'PUC Minas',
+          period: 'Academic honor',
+          description:
+            'Recognized by PUC Minas for academic excellence during the Software Engineering program.',
+        },
+        {
+          id: 'empirical-software-engineering-school',
+          title: 'First School of Studies in Empirical Software Engineering',
+          organization: 'ACM-sponsored academic program',
+          period: 'Academic program',
+          description:
+            'Participated in a focused academic program on empirical software engineering, sponsored by ACM.',
         },
       ],
     },

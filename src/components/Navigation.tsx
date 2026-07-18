@@ -13,6 +13,7 @@ export function Navigation({ items, activeSection, label, onNavigate }: Navigati
       {items.map((item) => (
         <a
           key={item.id}
+          className={item.shortLabel ? 'has-short-label' : undefined}
           href={`#${item.id}`}
           aria-current={activeSection === item.id ? 'true' : undefined}
           onClick={(event) => {
@@ -22,7 +23,8 @@ export function Navigation({ items, activeSection, label, onNavigate }: Navigati
             onNavigate?.(item.id)
           }}
         >
-          {item.label}
+          <span className="nav-label-full">{item.label}</span>
+          {item.shortLabel ? <span className="nav-label-short">{item.shortLabel}</span> : null}
         </a>
       ))}
     </nav>

@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Portuguese copy and mobile profile-photo refinement pushed.
+Academic experience section ready for deployment.
 
 ## Last completed work
 
@@ -11,6 +11,10 @@ Portuguese copy and mobile profile-photo refinement pushed.
 - Corrected Portuguese proper labels used from English content: `Português` and `Agência Experimental de Software`.
 - Changed the profile photo to a softly rounded square crop on mobile and tablet widths while keeping the circular crop on desktop.
 - Committed and pushed the Portuguese copy and mobile profile-photo refinement as `9939726 fix: polish portuguese copy and mobile photo`.
+- Added a separate Academic Experience section after professional Experience, with navigation entries in English and Portuguese.
+- Added academic items for the SBES 2024 paper, PUC Minas academic excellence recognition, and the ACM-sponsored First School of Studies in Empirical Software Engineering.
+- Reused the existing timeline component for academic entries by making its section ID configurable.
+- Updated the academic navigation label to show `Academic Experience` / `Experiência acadêmica` on desktop while keeping compact `Academic` / `Acadêmica` labels in the mobile sticky nav.
 - Committed Phase 0 baseline locally as `e1a1bfa chore: initialize portfolio`.
 - Committed Phase 1 locally as `c1b07c8 feat: add structural portfolio prototype`.
 - Created the public GitHub repository at `https://github.com/Pedro-nll/portfolio`.
@@ -93,13 +97,14 @@ Portuguese copy and mobile profile-photo refinement pushed.
 
 ## Next recommended action
 
-Review the next GitHub Pages deployment after the pushed refinement completes.
+Commit and push the Academic Experience section, then verify the GitHub Pages deployment.
 
 ## Blockers and questions for Pedro
 
 - `PORTFOLIO_BUILD_SPEC.md` is referenced by `AGENTS.md` but was not found in the repository during the catch-up pass.
 - Two concept project cards intentionally remain until Pedro supplies additional real project details.
 - Project-card previews remain CSS/SVG-style concept previews rather than real project screenshots.
+- Optional: exact date and external URL for the First School of Studies in Empirical Software Engineering, if Pedro wants that academic item to be more specific.
 
 ## Validation performed
 
@@ -200,11 +205,21 @@ Review the next GitHub Pages deployment after the pushed refinement completes.
 - `npm run lint` passed after the mobile profile-photo crop change.
 - `npm run build` passed after the mobile profile-photo crop change.
 - Headless Chrome mobile screenshot saved to `/tmp/portfolio-mobile-square-photo.png`; the phone profile image uses a square-ish crop with no obvious overlap.
+- `pdftotext` extraction from both supplied résumé PDFs confirmed the SBES 2024 paper title and PUC Minas academic excellence recognition.
+- `npm run type-check` passed after adding the Academic Experience section.
+- `npm run lint` passed after adding the Academic Experience section.
+- `npm run build` passed after adding the Academic Experience section.
+- Headless Chrome screenshots for the local Academic section pass were saved to `/tmp/portfolio-academic-desktop.png`, `/tmp/portfolio-academic-mobile.png`, `/tmp/portfolio-academic-desktop-wait.png`, and `/tmp/portfolio-academic-mobile-wait.png`; the mobile navigation fits three items.
+- Static production-output scan confirmed the Academic Experience strings are present in the built bundle.
+- `npm run type-check` passed after the responsive academic nav label change.
+- `npm run lint` passed after the responsive academic nav label change.
+- `npm run build` passed after the responsive academic nav label change.
+- Headless Chrome screenshots saved to `/tmp/portfolio-academic-nav-desktop.png` and `/tmp/portfolio-academic-nav-mobile.png`; desktop shows `Academic Experience`, while mobile keeps `Academic`.
 
 ## Known issues
 
 - Two concept project cards still remain.
-- Experience selection is confirmed for now: Infoblox, dti digital, and Agencia Experimental de Software / Grade Inteligente.
+- Professional experience selection is confirmed for now: Infoblox, dti digital, and Agência Experimental de Software / Grade Inteligente.
 - Lighthouse was not run in Phase 4 because it is not installed in the project and no new dependency was added.
 - Remaining visual differences from the reference: project previews are existing generated CSS/SVG-style placeholders rather than detailed raster screenshots; profile statistics are no longer rendered in the left panel to match the approved hierarchy, but remain in localized content; desktop project descriptions are line-clamped to keep card proportions close to the reference.
 - No known responsive issue was observed in the checked 1366x768, 1440x900, 1920x1080, 900x900, or 390x844 screenshots.
@@ -212,10 +227,17 @@ Review the next GitHub Pages deployment after the pushed refinement completes.
 - Focused refinement, content tweak, and language-scroll fix are deployed.
 - Section text cleanup and right-side Contact removal are deployed.
 - Portuguese copy spell-check and mobile profile-photo crop change were pushed and are awaiting deployment verification.
+- Academic Experience section is ready to deploy from the next push.
 
 ## Files changed in the latest session
 
 - `PROJECT_STATUS.md`
+- `docs/content-needed.md`
+- `docs/decisions.md`
+- `src/components/AppShell.tsx`
+- `src/components/ExperienceTimeline.tsx`
+- `src/components/Navigation.tsx`
 - `src/App.css`
 - `src/content/en.ts`
 - `src/content/pt.ts`
+- `src/content/types.ts`

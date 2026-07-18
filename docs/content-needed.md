@@ -15,6 +15,8 @@ Replace placeholders only with content supplied or explicitly approved by Pedro.
 - [x] Real Portuguese résumé PDF at `public/resume/resume-pt.pdf`.
 - [x] Real English résumé PDF at `public/resume/resume-en.pdf`.
 - [x] Final review of experience selection: keep Infoblox, dti digital, and Agencia Experimental de Software / Grade Inteligente; exclude research and teaching assistant entries.
+- [x] Academic experience section facts: SBES 2024 paper, PUC Minas Destaque Acadêmico / Academic Excellence Award, and First School of Studies in Empirical Software Engineering sponsored by ACM.
+- [ ] Optional exact date and external URL for the First School of Studies in Empirical Software Engineering, if Pedro wants the academic program item to be more specific.
 - [ ] Real project details beyond Grade Inteligente. Two concept project cards intentionally remain for now.
 - [x] GitHub username/profile handle: `Pedro-nll`.
 - [x] Final canonical production URL: `https://pedro-nll.github.io/portfolio/`.

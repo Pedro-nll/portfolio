@@ -127,6 +127,7 @@ export function AppShell({
           <div className="content-column">
             <ProjectsSection content={content.sections.projects} />
             <ExperienceTimeline content={content.sections.experience} />
+            <ExperienceTimeline content={content.sections.academic} sectionId="academic" />
 
             <footer className="site-footer">
               <p>

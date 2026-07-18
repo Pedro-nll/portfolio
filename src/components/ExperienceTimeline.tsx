@@ -2,14 +2,17 @@ import type { PortfolioContent } from '../content/types'
 
 type ExperienceTimelineProps = {
   content: PortfolioContent['sections']['experience']
+  sectionId?: 'experience' | 'academic'
 }
 
-export function ExperienceTimeline({ content }: ExperienceTimelineProps) {
+export function ExperienceTimeline({ content, sectionId = 'experience' }: ExperienceTimelineProps) {
+  const titleId = `${sectionId}-title`
+
   return (
-    <section className="section" id="experience" aria-labelledby="experience-title">
+    <section className="section" id={sectionId} aria-labelledby={titleId}>
       {content.eyebrow ? <p className="eyebrow">{content.eyebrow}</p> : null}
       <div className="section-heading">
-        <h2 id="experience-title">{content.title}</h2>
+        <h2 id={titleId}>{content.title}</h2>
         <p>{content.intro}</p>
       </div>
 

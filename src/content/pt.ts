@@ -26,6 +26,7 @@ export const ptContent: PortfolioContent = {
   nav: [
     { id: 'projects', label: 'Projetos' },
     { id: 'experience', label: 'Experiência' },
+    { id: 'academic', label: 'Experiência acadêmica', shortLabel: 'Acadêmica' },
   ],
   actions: {
     resume: 'Currículo',
@@ -117,6 +118,38 @@ export const ptContent: PortfolioContent = {
           period: 'agosto de 2023 - dezembro de 2024',
           description:
             'Participação nos primeiros projetos e na estruturação da agência, incluindo o Grade Inteligente para a comunidade acadêmica.',
+        },
+      ],
+    },
+    academic: {
+      eyebrow: '',
+      title: 'Experiência acadêmica',
+      intro:
+        'Pesquisa, reconhecimentos e programas acadêmicos ligados à prática de engenharia de software.',
+      items: [
+        {
+          id: 'sbes-paper',
+          title: 'Artigo publicado no SBES 2024',
+          organization: 'Simpósio Brasileiro de Engenharia de Software',
+          period: '2024',
+          description:
+            'Publicação do artigo "On the Identification of Self-Admitted Technical Debt with Large Language Models", resultado de iniciação científica na PUC Minas sobre dívida técnica auto-admitida.',
+        },
+        {
+          id: 'academic-excellence',
+          title: 'Destaque Acadêmico',
+          organization: 'PUC Minas',
+          period: 'Reconhecimento acadêmico',
+          description:
+            'Reconhecimento da PUC Minas por excelência acadêmica durante o curso de Engenharia de Software.',
+        },
+        {
+          id: 'empirical-software-engineering-school',
+          title: 'Primeira Escola de Estudos em Engenharia de Software Empírica',
+          organization: 'Programa acadêmico patrocinado pela ACM',
+          period: 'Programa acadêmico',
+          description:
+            'Participação em um programa acadêmico focado em engenharia de software empírica, patrocinado pela ACM.',
         },
       ],
     },

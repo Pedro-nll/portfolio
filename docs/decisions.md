@@ -62,6 +62,12 @@ Pedro later confirmed that research and teaching assistant entries should stay e
 
 The source files Pedro placed in `docs/` are ignored by git after being copied into `public/`; this avoids duplicating source assets in the public repository while keeping the served files in the app.
 
+## Academic experience section
+
+Pedro reversed the earlier decision to omit academic material from the page. Academic items now belong in a separate Academic Experience section after professional Experience, rather than being mixed into the professional timeline.
+
+The first academic item is the SBES 2024 publication, supported by the supplied résumé PDFs: "On the Identification of Self-Admitted Technical Debt with Large Language Models". The same section also includes the PUC Minas academic excellence recognition from the résumés and Pedro's supplied fact that he participated in the First School of Studies in Empirical Software Engineering, sponsored by ACM. No dates were invented for academic items that did not have dates in the supplied materials.
+
 ## Phase 6 GitHub Pages deployment
 
 Deployment uses GitHub Pages with GitHub Actions, matching the current Vite static deployment guide and GitHub Pages custom workflow requirements. The workflow builds with `npm ci`, `npm run lint`, and `npm run build`, uploads `dist`, and deploys it through GitHub Pages.

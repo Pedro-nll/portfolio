@@ -244,6 +244,10 @@
   background: var(--color-accent);
 }
 
+.nav-label-short {
+  display: none;
+}
+
 .profile-socials {
   display: flex;
   gap: 0.5rem;
@@ -697,6 +701,14 @@
     justify-content: center;
     min-height: 2.45rem;
     padding: 0.35rem 0.25rem 0.35rem 0.55rem;
+  }
+
+  .mobile-nav .has-short-label .nav-label-full {
+    display: none;
+  }
+
+  .mobile-nav .nav-label-short {
+    display: inline;
   }
 
   .content-window {
