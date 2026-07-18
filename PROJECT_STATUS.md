@@ -2,10 +2,14 @@
 
 ## Current phase
 
-Focused visual/content refinement deployed.
+Portuguese copy and mobile profile-photo refinement ready for deployment.
 
 ## Last completed work
 
+- Completed a catch-up pass for the current session by reading `PROJECT_STATUS.md`, `docs/decisions.md`, `docs/content-needed.md`, checking Git status and recent commits, and inspecting the current source structure.
+- Corrected Portuguese spelling and accent marks across localized visible copy in `src/content/pt.ts`.
+- Corrected Portuguese proper labels used from English content: `Português` and `Agência Experimental de Software`.
+- Changed the profile photo to a softly rounded square crop on mobile and tablet widths while keeping the circular crop on desktop.
 - Committed Phase 0 baseline locally as `e1a1bfa chore: initialize portfolio`.
 - Committed Phase 1 locally as `c1b07c8 feat: add structural portfolio prototype`.
 - Created the public GitHub repository at `https://github.com/Pedro-nll/portfolio`.
@@ -88,10 +92,11 @@ Focused visual/content refinement deployed.
 
 ## Next recommended action
 
-Review the deployed focused refinement at `https://pedro-nll.github.io/portfolio/`.
+Review the next GitHub Pages deployment after the pushed refinement completes.
 
 ## Blockers and questions for Pedro
 
+- `PORTFOLIO_BUILD_SPEC.md` is referenced by `AGENTS.md` but was not found in the repository during the catch-up pass.
 - Two concept project cards intentionally remain until Pedro supplies additional real project details.
 - Project-card previews remain CSS/SVG-style concept previews rather than real project screenshots.
 
@@ -187,6 +192,13 @@ Review the deployed focused refinement at `https://pedro-nll.github.io/portfolio
 - `git push origin main` succeeded for commit `3b1bce9`.
 - `gh run view 29390078651 --repo Pedro-nll/portfolio --json conclusion,status,url,headSha` returned `status: completed` and `conclusion: success`.
 - `curl -I https://pedro-nll.github.io/portfolio/` returned HTTP 200 after the section cleanup deployment.
+- `npm run type-check` passed after the Portuguese copy spell-check.
+- `npm run lint` passed after the Portuguese copy spell-check.
+- `npm run build` passed after the Portuguese copy spell-check.
+- `npm run type-check` passed after the mobile profile-photo crop change.
+- `npm run lint` passed after the mobile profile-photo crop change.
+- `npm run build` passed after the mobile profile-photo crop change.
+- Headless Chrome mobile screenshot saved to `/tmp/portfolio-mobile-square-photo.png`; the phone profile image uses a square-ish crop with no obvious overlap.
 
 ## Known issues
 
@@ -198,14 +210,11 @@ Review the deployed focused refinement at `https://pedro-nll.github.io/portfolio
 - Vite preview serves the built HTML at `/portfolio/`; built public assets are present in `dist/` and map correctly under GitHub Pages at `/portfolio/`.
 - Focused refinement, content tweak, and language-scroll fix are deployed.
 - Section text cleanup and right-side Contact removal are deployed.
+- Portuguese copy spell-check and mobile profile-photo crop change are ready to deploy from the next push.
 
 ## Files changed in the latest session
 
 - `PROJECT_STATUS.md`
-- `docs/decisions.md`
 - `src/App.css`
-- `src/components/ProfilePanel.tsx`
 - `src/content/en.ts`
 - `src/content/pt.ts`
-- `src/content/types.ts`
-- `src/styles/tokens.css`

@@ -2,11 +2,11 @@ import type { PortfolioContent } from './types'
 
 export const ptContent: PortfolioContent = {
   language: 'pt-BR',
-  skipLink: 'Pular para o conteudo principal',
+  skipLink: 'Pular para o conteúdo principal',
   aria: {
     profile: 'Resumo do perfil',
-    navigation: 'Secoes do portfolio',
-    controls: 'Controles do portfolio',
+    navigation: 'Seções do portfólio',
+    controls: 'Controles do portfólio',
   },
   profile: {
     name: 'Pedro Lambert',
@@ -14,24 +14,24 @@ export const ptContent: PortfolioContent = {
     email: 'pedronll@outlook.com',
     emailLabel: 'Enviar email para Pedro Lambert',
     intro:
-      'Profissional fullstack com experiencia em .NET, React, Java, TypeScript, Spring Boot e Python.',
+      'Profissional full-stack com experiência em .NET, React, Java, TypeScript, Spring Boot e Python.',
     status: '',
     photoSrc: 'profile/pedro-lambert.jpg',
     photoAlt: 'Foto profissional de Pedro Lambert',
     stats: [
-      { value: '2024', label: 'inicio profissional' },
-      { value: '3', label: 'experiencias selecionadas' },
+      { value: '2024', label: 'início profissional' },
+      { value: '3', label: 'experiências selecionadas' },
     ],
   },
   nav: [
     { id: 'projects', label: 'Projetos' },
-    { id: 'experience', label: 'Experiencia' },
+    { id: 'experience', label: 'Experiência' },
   ],
   actions: {
-    resume: 'Curriculo',
-    resumePending: 'PDF em portugues',
+    resume: 'Currículo',
+    resumePending: 'PDF em português',
     language: 'English',
-    languageLabel: 'Alternar idioma para ingles',
+    languageLabel: 'Alternar idioma para inglês',
     theme: {
       label: 'Alternar tema',
       light: 'Claro',
@@ -46,20 +46,20 @@ export const ptContent: PortfolioContent = {
       linkLabels: {
         demo: 'Demo',
         demoPending: 'Demo pendente',
-        source: 'Codigo',
-        sourcePending: 'Codigo pendente',
+        source: 'Código',
+        sourcePending: 'Código pendente',
       },
       technologiesLabel: 'Tecnologias',
       items: [
         {
           id: 'grade-inteligente',
           title: 'Grade Inteligente',
-          type: 'Projeto voluntario full-stack',
+          type: 'Projeto voluntário full-stack',
           statusLabel: 'Projeto real',
           summary:
-            'Sistema de gestao de matriz curricular para o Instituto de Ciencias Exatas e Informatica da PUC Minas, com cerca de 5 mil acessos na faculdade.',
+            'Sistema de gestão de matriz curricular para o Instituto de Ciências Exatas e Informática da PUC Minas, com cerca de 5 mil acessos na faculdade.',
           technologies: ['Spring Framework', 'Desenvolvimento full-stack', 'Java'],
-          previewLabel: 'Previa conceitual do projeto Grade Inteligente',
+          previewLabel: 'Prévia conceitual do projeto Grade Inteligente',
           links: {
             demo: 'https://icei.pucminas.br/gradeinteligente/',
           },
@@ -67,12 +67,12 @@ export const ptContent: PortfolioContent = {
         {
           id: 'automation-hub',
           title: 'Workflow Automation Hub',
-          type: 'Amostra de automacao',
+          type: 'Amostra de automação',
           statusLabel: 'Projeto conceitual',
           summary:
-            'Ferramenta que recebe eventos, aplica regras configuraveis e sincroniza informacoes entre servicos.',
+            'Ferramenta que recebe eventos, aplica regras configuráveis e sincroniza informações entre serviços.',
           technologies: ['Java', 'Spring Boot', 'REST APIs', 'Docker', 'PostgreSQL'],
-          previewLabel: 'Previa de historico de automacoes',
+          previewLabel: 'Prévia de histórico de automações',
           links: {},
         },
         {
@@ -81,42 +81,42 @@ export const ptContent: PortfolioContent = {
           type: 'Amostra com IA',
           statusLabel: 'Projeto conceitual',
           summary:
-            'Interface focada para extrair, resumir e organizar informacoes de documentos enviados.',
+            'Interface focada para extrair, resumir e organizar informações de documentos enviados.',
           technologies: ['React', 'TypeScript', 'API integration', 'Java placeholder'],
-          previewLabel: 'Previa de analise de documentos',
+          previewLabel: 'Prévia de análise de documentos',
           links: {},
         },
       ],
     },
     experience: {
       eyebrow: '',
-      title: 'Experiencia',
+      title: 'Experiência',
       intro:
-        'Entradas selecionadas com foco em desenvolvimento de software aplicado e experiencia proxima a projetos reais.',
+        'Entradas selecionadas com foco em desenvolvimento de software aplicado e experiência próxima a projetos reais.',
       items: [
         {
           id: 'infoblox',
-          title: 'Estagiario de engenharia de software',
+          title: 'Estagiário de engenharia de software',
           organization: 'Infoblox',
           period: 'abril de 2026 - atual',
           description:
-            'Experiencia profissional no desenvolvimento de microsservicos escalaveis em uma arquitetura distribuida na Infoblox, empresa do Vale do Silicio.',
+            'Experiência profissional no desenvolvimento de microsserviços escaláveis em uma arquitetura distribuída na Infoblox, empresa do Vale do Silício.',
         },
         {
           id: 'dti-digital',
-          title: 'Estagiario de desenvolvimento web fullstack',
+          title: 'Estagiário de desenvolvimento web full-stack',
           organization: 'dti digital',
           period: 'setembro de 2024 - agosto de 2025',
           description:
-            'Experiencia profissional em desenvolvimento web full-stack em Belo Horizonte.',
+            'Experiência profissional em desenvolvimento web full-stack em Belo Horizonte.',
         },
         {
           id: 'agencia-experimental',
-          title: 'Desenvolvedor de software voluntario',
-          organization: 'Agencia Experimental de Software - PUC Minas',
+          title: 'Desenvolvedor de software voluntário',
+          organization: 'Agência Experimental de Software - PUC Minas',
           period: 'agosto de 2023 - dezembro de 2024',
           description:
-            'Participacao nos primeiros projetos e na estruturacao da agencia, incluindo o Grade Inteligente para a comunidade academica.',
+            'Participação nos primeiros projetos e na estruturação da agência, incluindo o Grade Inteligente para a comunidade acadêmica.',
         },
       ],
     },
@@ -124,7 +124,7 @@ export const ptContent: PortfolioContent = {
       eyebrow: 'Contato',
       title: 'Vamos conversar',
       intro:
-        'Use os links confirmados abaixo para ver codigo, acompanhar a trajetoria profissional ou entrar em contato.',
+        'Use os links confirmados abaixo para ver código, acompanhar a trajetória profissional ou entrar em contato.',
       links: [
         { label: 'GitHub', href: 'https://github.com/Pedro-nll', external: true },
         {

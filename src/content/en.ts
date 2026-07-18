@@ -30,7 +30,7 @@ export const enContent: PortfolioContent = {
   actions: {
     resume: 'Resume',
     resumePending: 'English PDF',
-    language: 'Portugues',
+    language: 'Português',
     languageLabel: 'Switch language to Portuguese',
     theme: {
       label: 'Toggle theme',
@@ -113,7 +113,7 @@ export const enContent: PortfolioContent = {
         {
           id: 'agencia-experimental',
           title: 'Volunteer Software Developer',
-          organization: 'Agencia Experimental de Software - PUC Minas',
+          organization: 'Agência Experimental de Software - PUC Minas',
           period: 'August 2023 - December 2024',
           description:
             'Helped with early projects and agency structure, including Grade Inteligente for the academic community.',
