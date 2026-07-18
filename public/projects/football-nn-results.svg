@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="620" viewBox="0 0 780 620" role="img" aria-labelledby="title desc">
+  <title id="title">Football match prediction neural-network result visual</title>
+  <desc id="desc">Compact diagram showing Bundesliga match data, 90 script features, an MLP with 128 and 64 unit hidden layers, Home Draw Away output classes, benchmark comparison, and draw recall limitation.</desc>
+  <rect width="780" height="620" fill="#fffaf2"/>
+  <rect x="26" y="26" width="728" height="568" rx="22" fill="#f8f3ea" stroke="#dfd2c1" stroke-width="2"/>
+
+  <g font-family="Inter, Segoe UI, Arial, sans-serif">
+    <text x="58" y="78" fill="#28231d" font-size="31" font-weight="800">Bundesliga Match Prediction</text>
+    <text x="58" y="108" fill="#6d6257" font-size="18">Home win · Draw · Away win</text>
+
+    <g transform="translate(58 142)">
+      <rect x="0" y="0" width="300" height="62" rx="12" fill="#ffffff" stroke="#dfd2c1"/>
+      <text x="20" y="27" fill="#204c3d" font-size="17" font-weight="800">Football match data</text>
+      <text x="20" y="49" fill="#6d6257" font-size="13">2,448 Bundesliga matches · 2008/09-2015/16</text>
+
+      <path d="M150 72v24" stroke="#2f6f57" stroke-width="4" stroke-linecap="round"/>
+      <path d="M140 88l10 12 10-12" fill="none" stroke="#2f6f57" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <rect x="0" y="108" width="300" height="62" rx="12" fill="#ffffff" stroke="#dfd2c1"/>
+      <text x="20" y="135" fill="#204c3d" font-size="17" font-weight="800">90 numeric script features</text>
+      <text x="20" y="157" fill="#6d6257" font-size="13">history · FIFA · players · team attrs · odds</text>
+
+      <path d="M150 180v24" stroke="#2f6f57" stroke-width="4" stroke-linecap="round"/>
+      <path d="M140 196l10 12 10-12" fill="none" stroke="#2f6f57" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <rect x="0" y="216" width="300" height="76" rx="12" fill="#ffffff" stroke="#dfd2c1"/>
+      <text x="20" y="243" fill="#204c3d" font-size="17" font-weight="800">MLP architecture</text>
+      <circle cx="34" cy="267" r="10" fill="#2f6f57"/>
+      <circle cx="68" cy="267" r="10" fill="#2f6f57"/>
+      <circle cx="102" cy="267" r="10" fill="#2f6f57"/>
+      <path d="M46 267h10M80 267h10" stroke="#2f6f57" stroke-width="4" stroke-linecap="round"/>
+      <text x="128" y="272" fill="#28231d" font-size="13" font-weight="800">128 → 64 → Softmax 3</text>
+
+      <path d="M150 302v24" stroke="#2f6f57" stroke-width="4" stroke-linecap="round"/>
+      <path d="M140 318l10 12 10-12" fill="none" stroke="#2f6f57" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <g transform="translate(0 338)">
+        <rect x="0" y="0" width="92" height="48" rx="10" fill="#dfeee6" stroke="#2f6f57"/>
+        <rect x="104" y="0" width="92" height="48" rx="10" fill="#f0e5d7" stroke="#c7b8a3"/>
+        <rect x="208" y="0" width="92" height="48" rx="10" fill="#dfeee6" stroke="#2f6f57"/>
+        <text x="46" y="30" text-anchor="middle" fill="#204c3d" font-size="15" font-weight="800">Home</text>
+        <text x="150" y="30" text-anchor="middle" fill="#28231d" font-size="15" font-weight="800">Draw</text>
+        <text x="254" y="30" text-anchor="middle" fill="#204c3d" font-size="15" font-weight="800">Away</text>
+      </g>
+    </g>
+
+    <g transform="translate(398 142)">
+      <rect x="0" y="0" width="300" height="306" rx="16" fill="#ffffff" stroke="#dfd2c1"/>
+      <text x="22" y="36" fill="#28231d" font-size="22" font-weight="800">Results</text>
+      <text x="22" y="61" fill="#6d6257" font-size="13">Validation and benchmark outputs</text>
+
+      <g transform="translate(22 96)">
+        <text x="0" y="17" fill="#28231d" font-size="14" font-weight="800">Pedro final NN</text>
+        <rect x="128" y="0" width="114" height="20" rx="7" fill="#dfeee6"/>
+        <rect x="128" y="0" width="103" height="20" rx="7" fill="#2f6f57"/>
+        <text x="250" y="16" fill="#204c3d" font-size="14" font-weight="800">52.3%</text>
+      </g>
+
+      <g transform="translate(22 140)">
+        <text x="0" y="17" fill="#28231d" font-size="14" font-weight="800">João script NN</text>
+        <rect x="128" y="0" width="114" height="20" rx="7" fill="#dfeee6"/>
+        <rect x="128" y="0" width="102" height="20" rx="7" fill="#2f6f57"/>
+        <text x="250" y="16" fill="#204c3d" font-size="14" font-weight="800">52.1%</text>
+      </g>
+
+      <g transform="translate(22 184)">
+        <text x="0" y="17" fill="#28231d" font-size="14" font-weight="800">Best betting rule</text>
+        <rect x="128" y="0" width="114" height="20" rx="7" fill="#f0e5d7"/>
+        <rect x="128" y="0" width="101" height="20" rx="7" fill="#9a6b45"/>
+        <text x="250" y="16" fill="#6d6257" font-size="14" font-weight="800">51.7%</text>
+      </g>
+
+      <rect x="22" y="238" width="256" height="44" rx="11" fill="#fff5d8" stroke="#dfd2c1"/>
+      <text x="40" y="265" fill="#28231d" font-size="14" font-weight="800">Draw recall stayed at 0.00</text>
+    </g>
+
+    <text x="58" y="530" fill="#6d6257" font-size="15">TensorFlow/Keras · pandas · scikit-learn · Jupyter</text>
+  </g>
+</svg>

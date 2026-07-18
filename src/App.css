@@ -455,6 +455,16 @@
   gap: 0.6rem;
   min-height: 10.75rem;
   padding: 0.9rem;
+  position: relative;
+}
+
+.project-preview img {
+  display: block;
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
 }
 
 .project-preview span {

@@ -3,12 +3,17 @@ export type SectionId = 'projects' | 'experience' | 'academic'
 export type Project = {
   id: string
   title: string
-  type: string
-  statusLabel: string
+  type?: string
   summary: string
   technologies: string[]
   previewLabel: string
+  imageSrc?: string
+  showPendingLinks?: boolean
   links: {
+    demo?: string
+    source?: string
+  }
+  linkText?: {
     demo?: string
     source?: string
   }

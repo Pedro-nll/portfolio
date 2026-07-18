@@ -68,6 +68,22 @@ Pedro reversed the earlier decision to omit academic material from the page. Aca
 
 The first academic item is the SBES 2024 publication, supported by the supplied résumé PDFs: "On the Identification of Self-Admitted Technical Debt with Large Language Models". The same section also includes the PUC Minas academic excellence recognition from the résumés and Pedro's supplied fact that he participated in the First School of Studies in Empirical Software Engineering, sponsored by ACM. No dates were invented for academic items that did not have dates in the supplied materials.
 
+## Real project visual pass
+
+The remaining concept project cards were replaced with verified real work. Grade Inteligente keeps the existing approved portfolio description and now uses a public screenshot captured from the live application after selecting PUC Minas, Campus Coração Eucarístico, Engenharia de Software, curriculum `131701`.
+
+Football Match Prediction with Neural Networks was added as an academic team project. Its description, technologies, source link, and visual are based on the cloned `finalProjectNeuralNetworksWiSe25` repository plus the local final PDF/PPTX presentation. The card does not claim a live demo or sole authorship.
+
+Project cards now support optional real image assets. Real projects render only verified links, while concept placeholder pending-link text is reserved for explicit concept entries.
+
+## Four-project portfolio review pass
+
+180 Engenharia Sustentável and le&learn were added as local review entries without publishing or linking their private repositories. 180 uses the public YouTube presentation as its demo link and the login page as its selected cover. The relationship is labeled conservatively as `Partner project` / `Projeto para organização parceira` until Pedro confirms the exact arrangement.
+
+le&learn is labeled as an academic team project based on the repository documentation. Its cover uses `leLearnPic.png` inside a simple rounded mobile viewport, preserving the original UI without generative edits or aggressive upscaling. The source link is omitted because the repository is private.
+
+Pedro requested the project order: 180 Engenharia Sustentável, le&learn, Football Match Prediction with Neural Networks, and Grade Inteligente.
+
 ## Phase 6 GitHub Pages deployment
 
 Deployment uses GitHub Pages with GitHub Actions, matching the current Vite static deployment guide and GitHub Pages custom workflow requirements. The workflow builds with `npm ci`, `npm run lint`, and `npm run build`, uploads `dist`, and deploys it through GitHub Pages.

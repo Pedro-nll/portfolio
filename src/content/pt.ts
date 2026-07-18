@@ -20,7 +20,7 @@ export const ptContent: PortfolioContent = {
     photoAlt: 'Foto profissional de Pedro Lambert',
     stats: [
       { value: '2024', label: 'início profissional' },
-      { value: '3', label: 'experiências selecionadas' },
+      { value: '4', label: 'projetos selecionados' },
     ],
   },
   nav: [
@@ -53,39 +53,57 @@ export const ptContent: PortfolioContent = {
       technologiesLabel: 'Tecnologias',
       items: [
         {
-          id: 'grade-inteligente',
-          title: 'Grade Inteligente',
-          type: 'Projeto voluntário full-stack',
-          statusLabel: 'Projeto real',
+          id: '180-engenharia-sustentavel',
+          title: '180 Engenharia Sustentável',
+          type: 'Projeto para organização parceira',
           summary:
-            'Sistema de gestão de matriz curricular para o Instituto de Ciências Exatas e Informática da PUC Minas, com cerca de 5 mil acessos na faculdade.',
-          technologies: ['Spring Framework', 'Desenvolvimento full-stack', 'Java'],
-          previewLabel: 'Prévia conceitual do projeto Grade Inteligente',
+            'Plataforma de gestão para uma organização de paisagismo sustentável, com orçamentos, clientes, inventário de plantas, materiais e registros de compra.',
+          technologies: ['React', 'TypeScript', 'Vite', 'Spring Boot', 'Java', 'PostgreSQL'],
+          previewLabel:
+            'Captura de tela da tela de inventário de plantas do 180 Engenharia Sustentável',
+          imageSrc: 'projects/180-engenharia-cover.webp',
+          links: {},
+        },
+        {
+          id: 'le-learn',
+          title: 'le&learn',
+          summary:
+            'Aplicativo mobile em Flutter para estudar por documentos em língua estrangeira, com traduções, flashcards e chats colaborativos por documento.',
+          technologies: ['Flutter', 'Dart', 'Java', 'Spring Boot', 'APIs REST', 'Firebase'],
+          previewLabel:
+            'Captura mobile do le&learn mostrando a tela de biblioteca de documentos',
+          imageSrc: 'projects/le-learn-cover.webp',
+          links: {},
+        },
+        {
+          id: 'football-match-prediction-nn',
+          title: 'Predição de Partidas de Futebol com Redes Neurais',
+          summary:
+            'Projeto experimental de aprendizado de máquina para prever vitórias do mandante, empates e vitórias do visitante usando dados históricos de partidas, equipes, atributos do FIFA e cotações de apostas.',
+          technologies: ['Python', 'TensorFlow', 'Keras', 'pandas', 'scikit-learn', 'Jupyter'],
+          previewLabel:
+            'Diagrama do pipeline da rede neural para futebol e comparação com modelos de referência',
+          imageSrc: 'projects/football-nn-results.svg',
           links: {
-            demo: 'https://icei.pucminas.br/gradeinteligente/',
+            source: 'https://github.com/Pedro-nll/finalProjectNeuralNetworksWiSe25',
           },
         },
         {
-          id: 'automation-hub',
-          title: 'Workflow Automation Hub',
-          type: 'Amostra de automação',
-          statusLabel: 'Projeto conceitual',
+          id: 'grade-inteligente',
+          title: 'Grade Inteligente',
+          type: 'Projeto voluntário full-stack',
           summary:
-            'Ferramenta que recebe eventos, aplica regras configuráveis e sincroniza informações entre serviços.',
-          technologies: ['Java', 'Spring Boot', 'REST APIs', 'Docker', 'PostgreSQL'],
-          previewLabel: 'Prévia de histórico de automações',
-          links: {},
-        },
-        {
-          id: 'document-analyzer',
-          title: 'AI Document Analyzer',
-          type: 'Amostra com IA',
-          statusLabel: 'Projeto conceitual',
-          summary:
-            'Interface focada para extrair, resumir e organizar informações de documentos enviados.',
-          technologies: ['React', 'TypeScript', 'API integration', 'Java placeholder'],
-          previewLabel: 'Prévia de análise de documentos',
-          links: {},
+            'Sistema de gestão de matriz curricular para o Instituto de Ciências Exatas e Informática da PUC Minas, com cerca de 5 mil acessos na faculdade.',
+          technologies: ['Spring Framework', 'Desenvolvimento full-stack', 'Java'],
+          previewLabel:
+            'Captura de tela do Grade Inteligente mostrando períodos da grade e cartões de disciplinas',
+          imageSrc: 'projects/grade-inteligente-curriculum.webp',
+          links: {
+            demo: 'https://icei.pucminas.br/gradeinteligente/',
+          },
+          linkText: {
+            demo: 'Abrir projeto publicado',
+          },
         },
       ],
     },

@@ -20,7 +20,7 @@ export const enContent: PortfolioContent = {
     photoAlt: 'Professional photo of Pedro Lambert',
     stats: [
       { value: '2024', label: 'professional start' },
-      { value: '3', label: 'selected entries' },
+      { value: '4', label: 'selected projects' },
     ],
   },
   nav: [
@@ -53,39 +53,57 @@ export const enContent: PortfolioContent = {
       technologiesLabel: 'Technologies',
       items: [
         {
-          id: 'grade-inteligente',
-          title: 'Grade Inteligente',
-          type: 'Volunteer full-stack project',
-          statusLabel: 'Real project',
+          id: '180-engenharia-sustentavel',
+          title: '180 Engenharia Sustentável',
+          type: 'Partner project',
           summary:
-            'Curriculum matrix management system for PUC Minas ICEI units, with about 5,000 accesses at the university.',
-          technologies: ['Spring Framework', 'Full-stack development', 'Java'],
-          previewLabel: 'Conceptual preview of the Grade Inteligente project',
+            'Management platform for a sustainable landscaping organization, covering budgets, clients, plant inventory, materials, and purchase records.',
+          technologies: ['React', 'TypeScript', 'Vite', 'Spring Boot', 'Java', 'PostgreSQL'],
+          previewLabel:
+            'Screenshot of the 180 Engenharia Sustentável plant inventory management screen',
+          imageSrc: 'projects/180-engenharia-cover.webp',
+          links: {},
+        },
+        {
+          id: 'le-learn',
+          title: 'le&learn',
+          summary:
+            'Flutter mobile application for studying through foreign-language documents, translations, flashcards, and collaborative document chats.',
+          technologies: ['Flutter', 'Dart', 'Java', 'Spring Boot', 'REST APIs', 'Firebase'],
+          previewLabel:
+            'Mobile screenshot of le&learn showing the document library screen',
+          imageSrc: 'projects/le-learn-cover.webp',
+          links: {},
+        },
+        {
+          id: 'football-match-prediction-nn',
+          title: 'Football Match Prediction with Neural Networks',
+          summary:
+            'Experimental machine-learning project for predicting home wins, draws, and away wins from historical match, team, FIFA, and betting data.',
+          technologies: ['Python', 'TensorFlow', 'Keras', 'pandas', 'scikit-learn', 'Jupyter'],
+          previewLabel:
+            'Diagram of the football neural-network pipeline and benchmark comparison',
+          imageSrc: 'projects/football-nn-results.svg',
           links: {
-            demo: 'https://icei.pucminas.br/gradeinteligente/',
+            source: 'https://github.com/Pedro-nll/finalProjectNeuralNetworksWiSe25',
           },
         },
         {
-          id: 'automation-hub',
-          title: 'Workflow Automation Hub',
-          type: 'Automation sample',
-          statusLabel: 'Concept project',
+          id: 'grade-inteligente',
+          title: 'Grade Inteligente',
+          type: 'Volunteer full-stack project',
           summary:
-            'A tool that receives events, applies configurable rules, and synchronizes information across services.',
-          technologies: ['Java', 'Spring Boot', 'REST APIs', 'Docker', 'PostgreSQL'],
-          previewLabel: 'Automation history preview',
-          links: {},
-        },
-        {
-          id: 'document-analyzer',
-          title: 'AI Document Analyzer',
-          type: 'AI-powered sample',
-          statusLabel: 'Concept project',
-          summary:
-            'A focused interface that extracts, summarizes, and organizes information from uploaded documents.',
-          technologies: ['React', 'TypeScript', 'API integration', 'Java placeholder'],
-          previewLabel: 'Document analysis preview',
-          links: {},
+            'Curriculum matrix management system for PUC Minas ICEI units, with about 5,000 accesses at the university.',
+          technologies: ['Spring Framework', 'Full-stack development', 'Java'],
+          previewLabel:
+            'Screenshot of Grade Inteligente showing curriculum periods and subject cards',
+          imageSrc: 'projects/grade-inteligente-curriculum.webp',
+          links: {
+            demo: 'https://icei.pucminas.br/gradeinteligente/',
+          },
+          linkText: {
+            demo: 'Open deployed project',
+          },
         },
       ],
     },

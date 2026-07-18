@@ -2,10 +2,22 @@
 
 ## Current phase
 
-Academic experience section pushed.
+Local four-project portfolio pass ready for Pedro review. No commit, push, or deploy performed.
 
 ## Last completed work
 
+- Cloned `finalProjectNeuralNetworksWiSe25` locally under `/home/pedro/Desktop/Projetos/finalProjectNeuralNetworksWiSe25` for the portfolio/neural-network integration pass.
+- Audited the neural-network README, data files, notebooks, standalone script, saved model, result images, benchmark outputs, and local final presentation PDF/PPTX.
+- Rewrote the neural-network README around verified Bundesliga H/D/A classification, Kaggle European Soccer Database provenance, feature groups, benchmark comparisons, final reported metrics, draw-prediction limitation, installation, running instructions, and notebook order.
+- Fixed `model6_.py` to read `data/final_dataset.csv` and save `model6_final.keras` through repository-relative paths.
+- Downloaded the public Grade Inteligente transparent logo into `public/projects/grade-inteligente-logo.png`.
+- Captured public Grade Inteligente screenshot candidates from the live app without account creation by selecting PUC Minas, Campus Coração Eucarístico, Engenharia de Software, curriculum `131701`.
+- Saved the recommended optimized Grade Inteligente project screenshot as `public/projects/grade-inteligente-curriculum.webp`.
+- Created `public/projects/football-nn-results.svg` from verified neural-network metrics and architecture information.
+- Replaced the two remaining concept project cards with the neural-network academic team project, leaving the portfolio with Grade Inteligente and Football Match Prediction with Neural Networks as real projects.
+- Added optional project image support and removed pending demo/source text for real projects without that link type.
+- Updated the visible project statistic to `2` selected projects in both languages.
+- Started the local dev server at `http://127.0.0.1:5173/` for review and left it running.
 - Completed a catch-up pass for the current session by reading `PROJECT_STATUS.md`, `docs/decisions.md`, `docs/content-needed.md`, checking Git status and recent commits, and inspecting the current source structure.
 - Corrected Portuguese spelling and accent marks across localized visible copy in `src/content/pt.ts`.
 - Corrected Portuguese proper labels used from English content: `Português` and `Agência Experimental de Software`.
@@ -98,17 +110,31 @@ Academic experience section pushed.
 
 ## Next recommended action
 
-Verify the GitHub Pages deployment for the Academic Experience section.
+Review the local portfolio at `http://127.0.0.1:5173/`, the 180 Engenharia Sustentável cover candidates, and the le&learn cover before any commit, push, or deploy.
 
 ## Blockers and questions for Pedro
 
-- `PORTFOLIO_BUILD_SPEC.md` is referenced by `AGENTS.md` but was not found in the repository during the catch-up pass.
-- Two concept project cards intentionally remain until Pedro supplies additional real project details.
-- Project-card previews remain CSS/SVG-style concept previews rather than real project screenshots.
+- Confirm Pedro's individual responsibilities on the neural-network project before adding personal contribution wording.
+- Confirm the exact relationship/classification for 180 Engenharia Sustentável before changing `Partner project` / `Projeto para organização parceira`.
+- Confirm Pedro's individual responsibilities on 180 Engenharia Sustentável before adding any personal contribution wording.
+- Confirm whether le&learn should remain labeled as an academic team project and which personal contribution details, if any, should be stated.
+- Confirm the preferred 180 cover candidate: `180-engenharia-cover-candidate-1.webp`, `180-engenharia-cover-candidate-2.webp`, or `180-engenharia-cover-candidate-3.webp`.
+- Confirm whether the le&learn cover should use the document-library dominant treatment or a different repository screenshot.
+- Confirm whether the neural-network repository should get a license, and which license, if any.
+- Confirm whether the local final presentation PDF/PPTX should remain local reference files or be added to the neural-network repository; current sizes are 2.4 MB and 4.0 MB.
+- `PORTFOLIO_BUILD_SPEC.md` is referenced by `AGENTS.md` and is available one directory above the portfolio repository at `/home/pedro/Desktop/Projetos/PORTFOLIO_BUILD_SPEC.md`.
 - Optional: exact date and external URL for the First School of Studies in Empirical Software Engineering, if Pedro wants that academic item to be more specific.
 
 ## Validation performed
 
+- Neural-network CSV load validation passed without training: `data/final_dataset.csv` loaded as `(2448, 93)`, classes are `A`, `D`, `H`, and `model6_.py` will use 90 numeric features after dropping `winner` and `season`.
+- Portfolio `npm run type-check` passed after adding real projects and image support.
+- Portfolio `npm run lint` passed after adding real projects and image support.
+- Portfolio `npm run build` passed after adding real projects and image support. Production output keeps `/portfolio/` URLs in `dist/index.html`.
+- Local asset HEAD checks returned HTTP 200 for `/projects/grade-inteligente-curriculum.webp` and `/projects/football-nn-results.svg`.
+- Headless Chrome screenshots were captured for the portfolio project section at 1440x900, 1366x768, and 390x844.
+- English/dark theme verification through DevTools returned `en|dark|true` with the neural-network project text present.
+- Grade Inteligente public app automation loaded 57 subject cards across 8 periods for the selected Engenharia de Software curriculum.
 - `npm run lint` passed.
 - `npm run type-check` passed.
 - `npm run build` passed after Phase 1. Production output was generated in `dist/` with Vite base path `/portfolio/`.
@@ -216,10 +242,66 @@ Verify the GitHub Pages deployment for the Academic Experience section.
 - `npm run lint` passed after the responsive academic nav label change.
 - `npm run build` passed after the responsive academic nav label change.
 - Headless Chrome screenshots saved to `/tmp/portfolio-academic-nav-desktop.png` and `/tmp/portfolio-academic-nav-mobile.png`; desktop shows `Academic Experience`, while mobile keeps `Academic`.
+- Cloned the private `180engenharia` repository locally under `/home/pedro/Desktop/Projetos/180engenharia` after verifying authenticated GitHub access. Repository visibility and settings were not changed.
+- Cloned the private `le-learn` repository locally under `/home/pedro/Desktop/Projetos/le-learn` after verifying authenticated GitHub access. Repository visibility and settings were not changed.
+- Inspected 180 Engenharia Sustentável repository docs, frontend/backend structure, dependency manifests, Docker compose, safe application properties, prototype assets, and local presentation video/GIF without printing or using `.env` values.
+- Verified 180 as a React/Vite/TypeScript frontend with Material UI, Redux, Axios, Firebase package usage, and a Java 17 Spring Boot backend with JPA, security/JWT, validation, OpenAPI, H2 dev/test profiles, PostgreSQL production/Docker support, and budget/client/material/plant inventory functionality.
+- Did not run 180 locally because the frontend API points at the hosted API URL and the documented Docker path depends on `.env`; using it safely would require source/config changes or production-like services.
+- Created three 180 cover candidates from the local application GIF: side-by-side login and inventory, inventory alone, and login inset over inventory. The provisional portfolio cover uses the inventory-only candidate.
+- Inspected le&learn repository docs, Flutter app structure, Java/Spring backend, PDF-processing service, Docker compose, screenshots, and architecture documentation.
+- Verified le&learn as a Flutter/Dart application with Java/Spring Boot services, REST integration, WebSocket/STOMP chat, Firebase messaging configuration, PDF processing, Kafka in Docker setup, document library, translation, flashcards, spaced review, and collaborative document chats.
+- Could not locate a file named like `leLearnPic` under `/home/pedro/Desktop/Projetos`; used repository-documented mobile screenshots as the fallback visual source.
+- Created the provisional le&learn cover from documented mobile screenshots, preserving the source UI inside rounded mobile viewports with warm neutral surrounding surface and feature labels.
+- Added localized 180 Engenharia Sustentável and le&learn project entries in English and Portuguese with no private repository links and no source-code links for the private repos.
+- Updated selected project statistics to `4` in English and Portuguese.
+- `npm run lint` passed after adding 180 Engenharia Sustentável and le&learn.
+- `npm run type-check` passed after adding 180 Engenharia Sustentável and le&learn.
+- `npm run build` passed after adding 180 Engenharia Sustentável and le&learn.
+- Static scan found no visitor-facing private GitHub links for `180engenharia` or `le-learn` in `src`, `public`, `index.html`, docs, or built output.
+- Local dev server at `http://127.0.0.1:5173/` returned HTTP 200 after the project additions.
+- Direct `curl -I https://www.youtube.com/watch?v=VKlhxHW9m3g` returned HTTP 200 for the 180 public presentation link.
+- Browser tool opened `https://icei.pucminas.br/gradeinteligente/` and returned the live Grade Inteligente page content.
+- Headless Chrome screenshots captured at `/tmp/portfolio-projects-1366.png`, `/tmp/portfolio-projects-1440.png`, `/tmp/portfolio-projects-mobile.png`, `/tmp/portfolio-projects-mobile-tall.png`, and `/tmp/portfolio-projects-dark-en-1440.png`.
+- Chrome DevTools validation confirmed English content with `data-theme="dark"`, desktop content-window scrolling enabled, desktop body scrolling disabled, 4 project cards, meaningful project preview labels, and no private source links for the new projects.
+- Mobile-width DOM validation confirmed body scrolling is active, the content window overflow is visible, and 4 project cards render.
+- Swapped the selected 180 Engenharia Sustentável portfolio cover from inventory to the login-page prototype screenshot.
+- Rebuilt the selected le&learn portfolio cover from `/home/pedro/Desktop/Projetos/leLearnPic.png` and updated the localized preview labels to describe the document-library screen.
+- `npm run lint`, `npm run type-check`, and `npm run build` passed after the cover swap.
+- Fresh cover-swap screenshots were saved to `/tmp/portfolio-cover-swap-1440.png` and `/tmp/portfolio-cover-swap-mobile.png`.
+- Local dev server at `http://127.0.0.1:5173/` returned HTTP 200 after the cover swap.
+- Reordered projects per Pedro's request to Grade Inteligente, le&learn, Football Match Prediction with Neural Networks, and 180 Engenharia Sustentável in both languages.
+- `npm run type-check`, `npm run lint`, and `npm run build` passed after the project reorder.
+- Browser DOM check confirmed the rendered project order as `["Grade Inteligente", "le&learn", "Football Match Prediction with Neural Networks", "180 Engenharia Sustentável"]`.
+- Local dev server at `http://127.0.0.1:5173/` returned HTTP 200 after the reorder.
+- Swapped 180 Engenharia Sustentável and Grade Inteligente per Pedro's follow-up request, making the order 180 Engenharia Sustentável, le&learn, Football Match Prediction with Neural Networks, and Grade Inteligente.
+- `npm run type-check`, `npm run lint`, and `npm run build` passed after swapping 180 and Grade.
+- Browser DOM check confirmed the rendered project order as `["180 Engenharia Sustentável", "le&learn", "Football Match Prediction with Neural Networks", "Grade Inteligente"]`.
+- Local dev server at `http://127.0.0.1:5173/` returned HTTP 200 after swapping 180 and Grade.
+- Removed the project status tag from project cards and removed the unused `statusLabel` field from the project content model and locale entries.
+- `npm run type-check`, `npm run lint`, and `npm run build` passed after removing project status tags.
+- Static scan found no `Real project`, `Projeto real`, or `statusLabel` strings in `src` or `dist`.
+- Local dev server at `http://127.0.0.1:5173/` returned HTTP 200 after removing project status tags.
+- Removed `Academic team project` / `Projeto acadêmico em equipe` tags from le&learn and Football Match Prediction project cards.
+- Removed `Academic team project` text from `public/projects/football-nn-results.svg`.
+- `npm run type-check`, `npm run lint`, and `npm run build` passed after removing academic team project tags.
+- Static scan found no `Academic team project` or `Projeto acadêmico em equipe` strings in `src`, `public`, or `dist`.
+- Local dev server at `http://127.0.0.1:5173/` returned HTTP 200 after removing academic team project tags.
+- Regenerated `public/projects/le-learn-cover.webp` from `leLearnPic.png` without the added `Document library` and `Flashcards` label pills.
+- `npm run type-check`, `npm run lint`, and `npm run build` passed after removing the le&learn cover labels.
+- Static scan found no `Document library` or `Flashcards` strings in the le&learn cover path, `src`, or `dist`.
+- Local dev server at `http://127.0.0.1:5173/` returned HTTP 200 after removing the le&learn cover labels.
+- Removed the 180 Engenharia Sustentável demo link from both localized project entries.
+- `npm run type-check`, `npm run lint`, and `npm run build` passed after removing the 180 demo link.
+- Static scan found no `VKlhxHW9m3g` or YouTube watch URL in `src` or `dist`.
+- Local dev server at `http://127.0.0.1:5173/` returned HTTP 200 after removing the 180 demo link.
+- Added optional per-project link text and changed Grade Inteligente's deployed project link label to `Open deployed project` / `Abrir projeto publicado`.
+- `npm run type-check`, `npm run lint`, and `npm run build` passed after changing the Grade Inteligente link label.
+- Static scan confirmed the new Grade Inteligente link labels are present in `src` and `dist`.
+- Local dev server at `http://127.0.0.1:5173/` returned HTTP 200 after changing the Grade Inteligente link label.
 
 ## Known issues
 
-- Two concept project cards still remain.
+- No concept project cards remain in the current local project list.
 - Professional experience selection is confirmed for now: Infoblox, dti digital, and Agência Experimental de Software / Grade Inteligente.
 - Lighthouse was not run in Phase 4 because it is not installed in the project and no new dependency was added.
 - Remaining visual differences from the reference: project previews are existing generated CSS/SVG-style placeholders rather than detailed raster screenshots; profile statistics are no longer rendered in the left panel to match the approved hierarchy, but remain in localized content; desktop project descriptions are line-clamped to keep card proportions close to the reference.
@@ -242,3 +324,8 @@ Verify the GitHub Pages deployment for the Academic Experience section.
 - `src/content/en.ts`
 - `src/content/pt.ts`
 - `src/content/types.ts`
+- `public/projects/180-engenharia-cover-candidate-1.webp`
+- `public/projects/180-engenharia-cover-candidate-2.webp`
+- `public/projects/180-engenharia-cover-candidate-3.webp`
+- `public/projects/180-engenharia-cover.webp`
+- `public/projects/le-learn-cover.webp`
