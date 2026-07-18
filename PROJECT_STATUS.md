@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Portuguese copy and mobile profile-photo refinement ready for deployment.
+Portuguese copy and mobile profile-photo refinement pushed.
 
 ## Last completed work
 
@@ -10,6 +10,7 @@ Portuguese copy and mobile profile-photo refinement ready for deployment.
 - Corrected Portuguese spelling and accent marks across localized visible copy in `src/content/pt.ts`.
 - Corrected Portuguese proper labels used from English content: `Português` and `Agência Experimental de Software`.
 - Changed the profile photo to a softly rounded square crop on mobile and tablet widths while keeping the circular crop on desktop.
+- Committed and pushed the Portuguese copy and mobile profile-photo refinement as `9939726 fix: polish portuguese copy and mobile photo`.
 - Committed Phase 0 baseline locally as `e1a1bfa chore: initialize portfolio`.
 - Committed Phase 1 locally as `c1b07c8 feat: add structural portfolio prototype`.
 - Created the public GitHub repository at `https://github.com/Pedro-nll/portfolio`.
@@ -210,7 +211,7 @@ Review the next GitHub Pages deployment after the pushed refinement completes.
 - Vite preview serves the built HTML at `/portfolio/`; built public assets are present in `dist/` and map correctly under GitHub Pages at `/portfolio/`.
 - Focused refinement, content tweak, and language-scroll fix are deployed.
 - Section text cleanup and right-side Contact removal are deployed.
-- Portuguese copy spell-check and mobile profile-photo crop change are ready to deploy from the next push.
+- Portuguese copy spell-check and mobile profile-photo crop change were pushed and are awaiting deployment verification.
 
 ## Files changed in the latest session
 
