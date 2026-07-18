@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Academic experience section ready for deployment.
+Academic experience section pushed.
 
 ## Last completed work
 
@@ -15,6 +15,7 @@ Academic experience section ready for deployment.
 - Added academic items for the SBES 2024 paper, PUC Minas academic excellence recognition, and the ACM-sponsored First School of Studies in Empirical Software Engineering.
 - Reused the existing timeline component for academic entries by making its section ID configurable.
 - Updated the academic navigation label to show `Academic Experience` / `Experiência acadêmica` on desktop while keeping compact `Academic` / `Acadêmica` labels in the mobile sticky nav.
+- Committed and pushed the Academic Experience section as `25cc81c feat: add academic experience section`.
 - Committed Phase 0 baseline locally as `e1a1bfa chore: initialize portfolio`.
 - Committed Phase 1 locally as `c1b07c8 feat: add structural portfolio prototype`.
 - Created the public GitHub repository at `https://github.com/Pedro-nll/portfolio`.
@@ -97,7 +98,7 @@ Academic experience section ready for deployment.
 
 ## Next recommended action
 
-Commit and push the Academic Experience section, then verify the GitHub Pages deployment.
+Verify the GitHub Pages deployment for the Academic Experience section.
 
 ## Blockers and questions for Pedro
 
@@ -227,7 +228,7 @@ Commit and push the Academic Experience section, then verify the GitHub Pages de
 - Focused refinement, content tweak, and language-scroll fix are deployed.
 - Section text cleanup and right-side Contact removal are deployed.
 - Portuguese copy spell-check and mobile profile-photo crop change were pushed and are awaiting deployment verification.
-- Academic Experience section is ready to deploy from the next push.
+- Academic Experience section was pushed and is awaiting deployment verification.
 
 ## Files changed in the latest session
 
